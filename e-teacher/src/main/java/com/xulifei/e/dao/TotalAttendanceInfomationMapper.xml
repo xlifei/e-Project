@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xulifei.e.dao.TotalAttendanceInfomationMapper">
+  <resultMap id="BaseResultMap" type="com.xulifei.e.entity.TotalAttendanceInfomation">
+    <id column="total_attendance_id" jdbcType="VARCHAR" property="totalAttendanceId" />
+    <result column="atotal_check_number" jdbcType="INTEGER" property="atotalCheckNumber" />
+    <result column="total_attendance_number" jdbcType="INTEGER" property="totalAttendanceNumber" />
+    <result column="total_absenteeism" jdbcType="INTEGER" property="totalAbsenteeism" />
+    <result column="total_late_number" jdbcType="INTEGER" property="totalLateNumber" />
+    <result column="total_kuang_number" jdbcType="INTEGER" property="totalKuangNumber" />
+    <result column="total_leave_number" jdbcType="INTEGER" property="totalLeaveNumber" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    total_attendance_id, atotal_check_number, total_attendance_number, total_absenteeism, 
+    total_late_number, total_kuang_number, total_leave_number
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from total_attendance_infomation
+    where total_attendance_id = #{totalAttendanceId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from total_attendance_infomation
+    where total_attendance_id = #{totalAttendanceId,jdbcType=VARCHAR}
+  </delete>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xulifei.e.entity.TotalAttendanceInfomation">
+    update total_attendance_infomation
+    <set>
+      <if test="atotalCheckNumber != null">
+        atotal_check_number = #{atotalCheckNumber,jdbcType=INTEGER},
+      </if>
+      <if test="totalAttendanceNumber != null">
+        total_attendance_number = #{totalAttendanceNumber,jdbcType=INTEGER},
+      </if>
+      <if test="totalAbsenteeism != null">
+        total_absenteeism = #{totalAbsenteeism,jdbcType=INTEGER},
+      </if>
+      <if test="totalLateNumber != null">
+        total_late_number = #{totalLateNumber,jdbcType=INTEGER},
+      </if>
+      <if test="totalKuangNumber != null">
+        total_kuang_number = #{totalKuangNumber,jdbcType=INTEGER},
+      </if>
+      <if test="totalLeaveNumber != null">
+        total_leave_number = #{totalLeaveNumber,jdbcType=INTEGER},
+      </if>
+    </set>
+    where total_attendance_id = #{totalAttendanceId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xulifei.e.entity.TotalAttendanceInfomation">
+    update total_attendance_infomation
+    set atotal_check_number = #{atotalCheckNumber,jdbcType=INTEGER},
+      total_attendance_number = #{totalAttendanceNumber,jdbcType=INTEGER},
+      total_absenteeism = #{totalAbsenteeism,jdbcType=INTEGER},
+      total_late_number = #{totalLateNumber,jdbcType=INTEGER},
+      total_kuang_number = #{totalKuangNumber,jdbcType=INTEGER},
+      total_leave_number = #{totalLeaveNumber,jdbcType=INTEGER}
+    where total_attendance_id = #{totalAttendanceId,jdbcType=VARCHAR}
+  </update>
+</mapper>

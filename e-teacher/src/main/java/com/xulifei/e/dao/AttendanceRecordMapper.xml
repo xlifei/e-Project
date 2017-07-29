@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xulifei.e.dao.AttendanceRecordMapper">
+  <resultMap id="BaseResultMap" type="com.xulifei.e.entity.AttendanceRecord">
+    <id column="attendance_id" jdbcType="VARCHAR" property="attendanceId" />
+    <result column="class_id" jdbcType="VARCHAR" property="classId" />
+    <result column="attendance_name" jdbcType="VARCHAR" property="attendanceName" />
+    <result column="creation_time" jdbcType="TIMESTAMP" property="creationTime" />
+    <result column="rattendance_number" jdbcType="INTEGER" property="rattendanceNumber" />
+    <result column="rlate_number" jdbcType="INTEGER" property="rlateNumber" />
+    <result column="rkuang_number" jdbcType="INTEGER" property="rkuangNumber" />
+    <result column="rleave_number" jdbcType="INTEGER" property="rleaveNumber" />
+    <result column="attendance_code" jdbcType="VARCHAR" property="attendanceCode" />
+    <result column="is_open" jdbcType="BIT" property="isOpen" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    attendance_id, class_id, attendance_name, creation_time, rattendance_number, rlate_number, 
+    rkuang_number, rleave_number, attendance_code, is_open
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from attendance_record
+    where attendance_id = #{attendanceId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from attendance_record
+    where attendance_id = #{attendanceId,jdbcType=VARCHAR}
+  </delete>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xulifei.e.entity.AttendanceRecord">
+    update attendance_record
+    <set>
+      <if test="classId != null">
+        class_id = #{classId,jdbcType=VARCHAR},
+      </if>
+      <if test="attendanceName != null">
+        attendance_name = #{attendanceName,jdbcType=VARCHAR},
+      </if>
+      <if test="creationTime != null">
+        creation_time = #{creationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="rattendanceNumber != null">
+        rattendance_number = #{rattendanceNumber,jdbcType=INTEGER},
+      </if>
+      <if test="rlateNumber != null">
+        rlate_number = #{rlateNumber,jdbcType=INTEGER},
+      </if>
+      <if test="rkuangNumber != null">
+        rkuang_number = #{rkuangNumber,jdbcType=INTEGER},
+      </if>
+      <if test="rleaveNumber != null">
+        rleave_number = #{rleaveNumber,jdbcType=INTEGER},
+      </if>
+      <if test="attendanceCode != null">
+        attendance_code = #{attendanceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="isOpen != null">
+        is_open = #{isOpen,jdbcType=BIT},
+      </if>
+    </set>
+    where attendance_id = #{attendanceId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xulifei.e.entity.AttendanceRecord">
+    update attendance_record
+    set class_id = #{classId,jdbcType=VARCHAR},
+      attendance_name = #{attendanceName,jdbcType=VARCHAR},
+      creation_time = #{creationTime,jdbcType=TIMESTAMP},
+      rattendance_number = #{rattendanceNumber,jdbcType=INTEGER},
+      rlate_number = #{rlateNumber,jdbcType=INTEGER},
+      rkuang_number = #{rkuangNumber,jdbcType=INTEGER},
+      rleave_number = #{rleaveNumber,jdbcType=INTEGER},
+      attendance_code = #{attendanceCode,jdbcType=VARCHAR},
+      is_open = #{isOpen,jdbcType=BIT}
+    where attendance_id = #{attendanceId,jdbcType=VARCHAR}
+  </update>
+</mapper>

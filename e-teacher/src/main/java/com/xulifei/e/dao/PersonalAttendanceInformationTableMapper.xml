@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xulifei.e.dao.PersonalAttendanceInformationTableMapper">
+  <resultMap id="BaseResultMap" type="com.xulifei.e.entity.PersonalAttendanceInformationTable">
+    <id column="class_id" jdbcType="VARCHAR" property="classId" />
+    <id column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="total_number_attendance" jdbcType="INTEGER" property="totalNumberAttendance" />
+    <result column="attendance_number" jdbcType="INTEGER" property="attendanceNumber" />
+    <result column="absenteeism" jdbcType="INTEGER" property="absenteeism" />
+    <result column="late_number" jdbcType="INTEGER" property="lateNumber" />
+    <result column="kuang_number" jdbcType="INTEGER" property="kuangNumber" />
+    <result column="leave_number" jdbcType="INTEGER" property="leaveNumber" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    class_id, user_id, total_number_attendance, attendance_number, absenteeism, late_number, 
+    kuang_number, leave_number
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTableKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from personal_attendance_information_table
+    where class_id = #{classId,jdbcType=VARCHAR}
+      and user_id = #{userId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTableKey">
+    delete from personal_attendance_information_table
+    where class_id = #{classId,jdbcType=VARCHAR}
+      and user_id = #{userId,jdbcType=VARCHAR}
+  </delete>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable">
+    update personal_attendance_information_table
+    <set>
+      <if test="totalNumberAttendance != null">
+        total_number_attendance = #{totalNumberAttendance,jdbcType=INTEGER},
+      </if>
+      <if test="attendanceNumber != null">
+        attendance_number = #{attendanceNumber,jdbcType=INTEGER},
+      </if>
+      <if test="absenteeism != null">
+        absenteeism = #{absenteeism,jdbcType=INTEGER},
+      </if>
+      <if test="lateNumber != null">
+        late_number = #{lateNumber,jdbcType=INTEGER},
+      </if>
+      <if test="kuangNumber != null">
+        kuang_number = #{kuangNumber,jdbcType=INTEGER},
+      </if>
+      <if test="leaveNumber != null">
+        leave_number = #{leaveNumber,jdbcType=INTEGER},
+      </if>
+    </set>
+    where class_id = #{classId,jdbcType=VARCHAR}
+      and user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable">
+    update personal_attendance_information_table
+    set total_number_attendance = #{totalNumberAttendance,jdbcType=INTEGER},
+      attendance_number = #{attendanceNumber,jdbcType=INTEGER},
+      absenteeism = #{absenteeism,jdbcType=INTEGER},
+      late_number = #{lateNumber,jdbcType=INTEGER},
+      kuang_number = #{kuangNumber,jdbcType=INTEGER},
+      leave_number = #{leaveNumber,jdbcType=INTEGER}
+    where class_id = #{classId,jdbcType=VARCHAR}
+      and user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+</mapper>

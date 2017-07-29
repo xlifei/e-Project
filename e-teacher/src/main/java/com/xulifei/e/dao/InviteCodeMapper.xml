@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xulifei.e.dao.InviteCodeMapper">
+  <resultMap id="BaseResultMap" type="com.xulifei.e.entity.InviteCode">
+    <id column="code_id" jdbcType="VARCHAR" property="codeId" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    code_id, code, status
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from invite_code
+    where code_id = #{codeId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from invite_code
+    where code_id = #{codeId,jdbcType=VARCHAR}
+  </delete>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xulifei.e.entity.InviteCode">
+    update invite_code
+    <set>
+      <if test="code != null">
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where code_id = #{codeId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xulifei.e.entity.InviteCode">
+    update invite_code
+    set code = #{code,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR}
+    where code_id = #{codeId,jdbcType=VARCHAR}
+  </update>
+</mapper>

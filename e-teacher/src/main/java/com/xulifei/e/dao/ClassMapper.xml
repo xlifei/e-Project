@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xulifei.e.dao.ClassMapper">
+  <resultMap id="BaseResultMap" type="com.xulifei.e.entity.Class">
+    <id column="class_id" jdbcType="VARCHAR" property="classId" />
+    <result column="code_id" jdbcType="VARCHAR" property="codeId" />
+    <result column="total_attendance_id" jdbcType="VARCHAR" property="totalAttendanceId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="class_name" jdbcType="VARCHAR" property="className" />
+    <result column="serial_number" jdbcType="VARCHAR" property="serialNumber" />
+    <result column="atotal_check_number" jdbcType="INTEGER" property="atotalCheckNumber" />
+    <result column="member_number" jdbcType="INTEGER" property="memberNumber" />
+    <result column="is_archive" jdbcType="BIT" property="isArchive" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    class_id, code_id, total_attendance_id, user_id, class_name, serial_number, atotal_check_number, 
+    member_number, is_archive
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from class
+    where class_id = #{classId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from class
+    where class_id = #{classId,jdbcType=VARCHAR}
+  </delete>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xulifei.e.entity.Class">
+    update class
+    <set>
+      <if test="codeId != null">
+        code_id = #{codeId,jdbcType=VARCHAR},
+      </if>
+      <if test="totalAttendanceId != null">
+        total_attendance_id = #{totalAttendanceId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="className != null">
+        class_name = #{className,jdbcType=VARCHAR},
+      </if>
+      <if test="serialNumber != null">
+        serial_number = #{serialNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="atotalCheckNumber != null">
+        atotal_check_number = #{atotalCheckNumber,jdbcType=INTEGER},
+      </if>
+      <if test="memberNumber != null">
+        member_number = #{memberNumber,jdbcType=INTEGER},
+      </if>
+      <if test="isArchive != null">
+        is_archive = #{isArchive,jdbcType=BIT},
+      </if>
+    </set>
+    where class_id = #{classId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xulifei.e.entity.Class">
+    update class
+    set code_id = #{codeId,jdbcType=VARCHAR},
+      total_attendance_id = #{totalAttendanceId,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=VARCHAR},
+      class_name = #{className,jdbcType=VARCHAR},
+      serial_number = #{serialNumber,jdbcType=VARCHAR},
+      atotal_check_number = #{atotalCheckNumber,jdbcType=INTEGER},
+      member_number = #{memberNumber,jdbcType=INTEGER},
+      is_archive = #{isArchive,jdbcType=BIT}
+    where class_id = #{classId,jdbcType=VARCHAR}
+  </update>
+</mapper>

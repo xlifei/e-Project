@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/e-core/e-core.iml" filepath="$PROJECT_DIR$/e-core/e-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e-file/e-file.iml" filepath="$PROJECT_DIR$/e-file/e-file.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e-parent.iml" filepath="$PROJECT_DIR$/e-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e-student/e-student.iml" filepath="$PROJECT_DIR$/e-student/e-student.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e-teacher/e-teacher.iml" filepath="$PROJECT_DIR$/e-teacher/e-teacher.iml" />
+    </modules>
+  </component>
+</project>
