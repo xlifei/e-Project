@@ -141,6 +141,7 @@
       <artifactId>jackson-mapper-asl</artifactId>
       <version>${mvc-jackson.version}</version>
     </dependency>
+
   </dependencies>
 
   </dependencyManagement>

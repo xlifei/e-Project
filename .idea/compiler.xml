@@ -29,7 +29,7 @@
         <module name="e-teacher" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.7">
       <module name="e-core" target="1.5" />
       <module name="e-file" target="1.5" />
       <module name="e-parent" target="1.5" />

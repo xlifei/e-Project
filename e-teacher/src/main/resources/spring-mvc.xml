@@ -9,7 +9,11 @@
 	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
 	">
 
-	<!-- 同时开启json格式的支持 -->
+	<!--
+	 同时开启json格式的支持,spring mvc 配置了 <mvc:annotation-driver/> 后 ，
+	如果classpath 里面包含jackson 包，则自动注册MappingJackson2HttpMessageConverter，
+	从而支持json 输出。
+	 -->
 	<mvc:annotation-driven></mvc:annotation-driven>
 	<!-- <context:component-scan base-package="*"/> -->
 
@@ -27,4 +31,13 @@
 			<!--<bean class="com.xulifei.e.interceptor.LoginInterceptor"></bean>-->
 		<!--</mvc:interceptor>-->
 	<!--</mvc:interceptors>-->
+	<!--
+	 因为上面配置了mvc:annotation-driven，所以这里就不用配置了，自动注册了
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">-->
+		 <!--<property name="messageConverters">-->
+			      <!--<list>-->
+					   <!--<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"></bean>-->
+				  <!--</list>-->
+		 <!--</property>-->
+	<!--</bean>-->
 </beans>

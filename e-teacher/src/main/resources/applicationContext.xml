@@ -14,10 +14,14 @@
 	http://www.springframework.org/schema/aop 
 	http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
 
- 	<!-- 
+
+	<!--导入外部properties文件-->
+<context:property-placeholder location="classpath:db.properties"></context:property-placeholder>
+	<!--
 		bean的扫描器，@Repository, @Service, @Controller, @Component(标注在有一些无法封层的类上)
+	     排除控制层，因为控制层是mvc来扫描的。
 	 -->
-		<context:component-scan base-package="com.xulifei.e">
+			<context:component-scan base-package="com.xulifei.e">
 		<context:exclude-filter type="annotation"		
 		expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>	
@@ -25,10 +29,10 @@
   
   <!-- 配置数据源,这里配置了，mybatis就不用配置了-->
 <bean id="dataSource"  class="com.mchange.v2.c3p0.ComboPooledDataSource">
-   <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
-   <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/ev2?useUnicode=true&amp;characterEncoding=UTF-8"></property>
-   <property name="user" value="root"></property>
-   <property name="password" value="123"></property>
+   <property name="driverClass" value="${database.driver}"></property>
+   <property name="jdbcUrl" value="${database.url}"></property>
+   <property name="user" value="${database.username}"></property>
+   <property name="password" value="${database.password}"></property>
 </bean>
 
 
@@ -47,16 +51,20 @@
 	<!-- 配置事务通知 -->
 	<tx:advice id="advice" transaction-manager="transactionManager">
 		<tx:attributes>
-<!-- 默认只处理运行时异常，可加rollback-for="Exception/Throwable"等处理所有异常或包括错误 -->
+<!-- 默认只处理运行时异常，可加rollback-for="Exception/Throwable"等处理所有异常或包括错误
+  required 业务方法必须在一个事务中运行
+  supports 业务方法如果在事务范围内则成为该事务一部分，如果没有就在无事务环境下执行
+  也就是说增删改相关操作都要在事务中运行，其他随便。
+-->
 		
-				<tx:method name="save*" propagation="REQUIRED" rollback-for="Exception"/>
+			<tx:method name="save*" propagation="REQUIRED" rollback-for="Exception"/>
 			<tx:method name="add*" propagation="REQUIRED" rollback-for="Exception"/>
 			<tx:method name="login*" propagation="REQUIRED"  rollback-for="Exception"/>
 			<tx:method name="update*" propagation="REQUIRED"  rollback-for="Exception"/>
 			<tx:method name="modify*" propagation="REQUIRED" rollback-for="Exception"/>
 			<tx:method name="delete*" propagation="REQUIRED" rollback-for="Exception"/>
 			<tx:method name="remove*" propagation="REQUIRED" rollback-for="Exception"/>
-			<tx:method name="select*" read-only="true" />
+			<tx:method name="select*"  read-only="true"    />
 			<tx:method name="get*" read-only="true"/>
 			<tx:method name="*" propagation="SUPPORTS" />
 			 
@@ -67,19 +75,34 @@
 	<aop:config>
 		<aop:advisor advice-ref="advice" pointcut="execution(* com.xulifei.e.service.impl.*.*(..))"/>
 	</aop:config>
-	<!-- 配置SessionTemplate，已封装了繁琐的数据操作-->
+	<!-- 配置SessionTemplate，已封装了繁琐的数据操作,因为下面配置了MapperScannerConfigurer
+	自动生成了所以就不用配了
+	-->
 	<!--<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">-->
 		<!--<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"/>		-->
 	<!--</bean>-->
 
-
 	<!-- 配置 转换器，对于在basePackage设置的包（包括子包）下的接口类，
         如果接口类的全类名在Mapper.xml文件中和定义过命名空间一致，
          将被转换成spring的BEAN，在调用
-            的地方通过@Autowired方式将可以注入接口实例 -->
+            的地方通过@Autowired方式将可以注入接口实例
+            也就是说dao实现不用我们自己写了，只要在dao接口中定义一个方法，同时该方法名在mapper.xml
+            文件中有对应的id名称相同的操作。
+      -->
+	<!--basePackage 属性是让你为映射器接口文件设置基本的包路径。
+你可以使用分号或逗号 作为分隔符设置多于一个的包路径。
+每个映射器将会在指定的包路径中递归地被搜索到。
+注 意 , 没 有 必 要 去 指 定 SqlSessionFactory 或 SqlSessionTemplate ,
+因 为 MapperScannerConfigurer 将会创建 MapperFactoryBean,之后自动装配。
+但是,如果你使 用了一个 以上的 DataSource ,那 么自动 装配可 能会失效 。
+这种 情况下 ,你可 以使用 sqlSessionFactoryBeanName 或 sqlSessionTemplateBeanName
+ 属性来设置正确的 bean 名 称来使用。
+这就是它如何来配置的,注意 bean 的名称是必须的,而不是 bean 的引用,因 此,value
+属性在这里替代通常的 ref:
+<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />-->
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 		<property name="basePackage" value="com.xulifei.e.dao" />
 	</bean>
 
