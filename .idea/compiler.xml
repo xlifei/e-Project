@@ -26,15 +26,15 @@
         <module name="e-core" />
         <module name="e-file" />
         <module name="e-student" />
+      </profile>
+      <profile default="false" name="Annotation profile for e-teacher" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
         <module name="e-teacher" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.7">
-      <module name="e-core" target="1.5" />
-      <module name="e-file" target="1.5" />
-      <module name="e-parent" target="1.5" />
-      <module name="e-student" target="1.5" />
-      <module name="e-teacher" target="1.5" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.7" />
   </component>
 </project>

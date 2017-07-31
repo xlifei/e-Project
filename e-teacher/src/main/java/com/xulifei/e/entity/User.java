@@ -1,6 +1,7 @@
 package com.xulifei.e.entity;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 public class User implements Serializable {
     private static final long serialVersionUID = -6546254384193596607L;
@@ -29,6 +30,9 @@ public class User implements Serializable {
     private String researchDirection;
 
     public String getUserId() {
+        if (userId == null) {
+            userId = UUID.randomUUID().toString().replaceAll("-","");
+        }
         return userId;
     }
 

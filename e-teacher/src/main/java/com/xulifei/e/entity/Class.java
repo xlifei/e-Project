@@ -1,6 +1,7 @@
 package com.xulifei.e.entity;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 public class Class  implements Serializable{
 
@@ -24,6 +25,9 @@ public class Class  implements Serializable{
     private Boolean isArchive;
 
     public String getClassId() {
+        if (classId != null) {
+            classId = UUID.randomUUID().toString().replaceAll("-","");
+        }
         return classId;
     }
 

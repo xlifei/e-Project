@@ -11,4 +11,7 @@ public interface UserMapper extends BaseMapper<User>{
 
     int updateByPrimaryKey(User record);
     User login(User user);
+    int updatePwdByAccount(User user);
+    int findByAccount(User user);
+    int insertSelective(User user);
 }

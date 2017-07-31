@@ -83,10 +83,117 @@
       research_direction = #{researchDirection,jdbcType=VARCHAR}
     where user_id = #{userId,jdbcType=VARCHAR}
   </update>
+  <insert id="insert" parameterType="user" >
+
+    insert into user (user_id, account, pwd,
+     user_name, sex, school,department,major,sjnumber,education_background,professional_title,research_direction)
+    values (#{userId,jdbcType=VARCHAR}, #{account,jdbcType=VARCHAR}, #{pwd,jdbcType=VARCHAR},
+    #{userName,jdbcType=VARCHAR},#{sex,jdbcType=VARCHAR}, #{school,jdbcType=VARCHAR},
+    #{department,jdbcType=VARCHAR},#{major,jdbcType=VARCHAR},#{sjnumber,jdbcType=VARCHAR},
+    #{educationBackground,jdbcType=VARCHAR},#{professionalTitle,jdbcType=VARCHAR},
+    #{researchDirection,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="user" >
+
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="account != null" >
+        account,
+      </if>
+      <if test="pwd != null" >
+        pwd,
+      </if>
+      <if test="userName != null" >
+        user_name,
+      </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="school != null" >
+        school,
+      </if>
+      <if test="department != null" >
+        department,
+      </if>
+      <if test="major != null" >
+        major,
+      </if>
+      <if test="sjnumber != null" >
+        sjnumber,
+      </if>
+
+      <if test="educationBackground != null" >
+        education_background,
+      </if>
+      <if test="professionalTitle != null" >
+        professional_title,
+      </if>
+      <if test="researchDirection != null" >
+        research_direction,
+      </if>
+
+    </trim>
+
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="account != null" >
+        #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="pwd != null" >
+        #{pwd,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null" >
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="school != null" >
+        #{school,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null" >
+        #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="major != null" >
+        #{major,jdbcType=VARCHAR},
+      </if>
+      <if test="sjnumber != null" >
+        #{sjnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="educationBackground != null" >
+        #{educationBackground,jdbcType=VARCHAR},
+      </if>
+      <if test="professionalTitle != null" >
+        #{professionalTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="researchDirection != null" >
+        #{researchDirection,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+
+
+
+
 
   <!-- 用户登陆 -->
   <select id="login" parameterType="user" resultMap="BaseResultMap">
   	select * from USER where account =#{account} and pwd =#{pwd}
+  </select>
+  <update id="updatePwdByAccount"  parameterType="com.xulifei.e.entity.User">
+    update user
+    set
+    pwd = #{pwd,jdbcType=VARCHAR}
+    where  account = #{account,jdbcType=VARCHAR}
+  </update>
+  <select id="findByAccount" parameterType="user" resultType="int">
+    select COUNT(*) from USER where account =#{account}
   </select>
 
 </mapper>

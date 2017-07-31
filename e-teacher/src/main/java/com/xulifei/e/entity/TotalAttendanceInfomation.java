@@ -1,6 +1,7 @@
 package com.xulifei.e.entity;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 public class TotalAttendanceInfomation implements Serializable {
 
@@ -20,6 +21,9 @@ public class TotalAttendanceInfomation implements Serializable {
     private Integer totalLeaveNumber;
 
     public String getTotalAttendanceId() {
+        if (totalAttendanceId != null) {
+            totalAttendanceId = UUID.randomUUID().toString().replaceAll("-","");
+        }
         return totalAttendanceId;
     }
 

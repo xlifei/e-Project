@@ -1,6 +1,7 @@
 package com.xulifei.e.entity;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 public class InviteCode implements Serializable {
     private static final long serialVersionUID = -2534610911783897579L;
@@ -11,6 +12,9 @@ public class InviteCode implements Serializable {
     private String status;
 
     public String getCodeId() {
+        if (codeId != null) {
+            codeId = UUID.randomUUID().toString().replaceAll("-","");
+        }
         return codeId;
     }
 

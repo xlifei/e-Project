@@ -2,6 +2,7 @@ package com.xulifei.e.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.UUID;
 
 public class AttendanceRecord implements Serializable{
 
@@ -27,6 +28,9 @@ public class AttendanceRecord implements Serializable{
     private Boolean isOpen;
 
     public String getAttendanceId() {
+        if (attendanceId != null) {
+            attendanceId = UUID.randomUUID().toString().replaceAll("-","");
+        }
         return attendanceId;
     }
 
