@@ -60,11 +60,15 @@
 			<tx:method name="save*" propagation="REQUIRED" rollback-for="Exception"/>
 			<tx:method name="add*" propagation="REQUIRED" rollback-for="Exception"/>
 			<tx:method name="login*" propagation="REQUIRED"  rollback-for="Exception"/>
+			<tx:method name="register*" propagation="REQUIRED"  rollback-for="Exception"/>
+			<tx:method name="insert*" propagation="REQUIRED"  rollback-for="Exception"/>
 			<tx:method name="update*" propagation="REQUIRED"  rollback-for="Exception"/>
 			<tx:method name="modify*" propagation="REQUIRED" rollback-for="Exception"/>
 			<tx:method name="delete*" propagation="REQUIRED" rollback-for="Exception"/>
 			<tx:method name="remove*" propagation="REQUIRED" rollback-for="Exception"/>
+			<tx:method name="join*" propagation="REQUIRED" rollback-for="Exception"/>
 			<tx:method name="select*"  read-only="true"    />
+			<tx:method name="find*"  read-only="true"    />
 			<tx:method name="get*" read-only="true"/>
 			<tx:method name="*" propagation="SUPPORTS" />
 			 

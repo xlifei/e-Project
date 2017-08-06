@@ -35,6 +35,12 @@
         <module name="e-teacher" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.7" />
+    <bytecodeTargetLevel target="1.7">
+      <module name="e-core" target="1.5" />
+      <module name="e-file" target="1.5" />
+      <module name="e-parent" target="1.5" />
+      <module name="e-student" target="1.5" />
+      <module name="e-teacher" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>

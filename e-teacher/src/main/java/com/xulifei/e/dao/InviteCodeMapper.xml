@@ -37,4 +37,62 @@
       status = #{status,jdbcType=VARCHAR}
     where code_id = #{codeId,jdbcType=VARCHAR}
   </update>
+
+  <insert id="insert" parameterType="inviteCode" >
+
+    insert into invite_code ( code_id, code, status)
+    values (#{codeId,jdbcType=VARCHAR},#{code,jdbcType=VARCHAR},#{status,jdbcType=VARCHAR})
+  </insert>
+
+
+  <insert id="insertSelective" parameterType="inviteCode" >
+
+    insert into invite_code
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="codeId != null" >
+        code_id,
+      </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+
+
+    </trim>
+
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="codeId != null" >
+        #{codeId,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null" >
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+
+    </trim>
+  </insert>
+  <update id="resetCode" parameterType="map">
+UPDATE invite_code
+SET CODE = #{newCode} WHERE code_id = (SELECT code_id FROM class  WHERE class_id=#{classId} )
+  </update>
+
+  <update id="stopCode" parameterType="map">
+    UPDATE invite_code
+    SET status = #{status} WHERE code_id = (SELECT code_id FROM class  WHERE class_id=#{classId} )
+  </update>
+  <update id="useCode" parameterType="map">
+    UPDATE invite_code
+    SET status = #{status} WHERE code_id = (SELECT code_id FROM class  WHERE class_id=#{classId} )
+  </update>
+  <select id="findCodeByClassId" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+      code
+    from invite_code
+    where code_id = (SELECT code_id FROM class  WHERE class_id=#{classId} )
+  </select>
+
 </mapper>

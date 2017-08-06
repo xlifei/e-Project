@@ -4,15 +4,15 @@ public class PersonalAttendanceInformationTable extends PersonalAttendanceInform
     private static final long serialVersionUID = -857619790822353952L;
     private Integer totalNumberAttendance;
 
-    private Integer attendanceNumber;
+    private Integer attendanceNumber = 0;
 
-    private Integer absenteeism;
+    private Integer absenteeism =0;
 
-    private Integer lateNumber;
+    private Integer lateNumber =0;
 
-    private Integer kuangNumber;
+    private Integer kuangNumber =0;
 
-    private Integer leaveNumber;
+    private Integer leaveNumber =0;
 
     public Integer getTotalNumberAttendance() {
         return totalNumberAttendance;

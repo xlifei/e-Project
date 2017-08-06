@@ -9,10 +9,10 @@ public class InviteCode implements Serializable {
 
     private String code;
 
-    private String status;
+    private String status=Constants.START_USING.getState();
 
     public String getCodeId() {
-        if (codeId != null) {
+        if (codeId == null) {
             codeId = UUID.randomUUID().toString().replaceAll("-","");
         }
         return codeId;

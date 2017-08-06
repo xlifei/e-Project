@@ -1,31 +1,39 @@
 package com.xulifei.e.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class Class  implements Serializable{
 
     private static final long serialVersionUID = 5002547115976322693L;
     private String classId;
+    private InviteCode inviteCode;
 
-    private String codeId;
+    private TotalAttendanceInfomation totalAttendanceInfomation;
 
-    private String totalAttendanceId;
+    private User user;
 
-    private String userId;
+    private List<AttendanceRecord> attendanceRecordList = new ArrayList<AttendanceRecord>();
+
+    private  List<User> userList = new ArrayList<User>();
 
     private String className;
 
-    private String serialNumber;
+    private Integer serialNumber = 1;
 
-    private Integer atotalCheckNumber;
+    private Integer atotalCheckNumber = 0;
 
-    private Integer memberNumber;
+    private Integer memberNumber = 0;
 
-    private Boolean isArchive;
+    private Boolean isArchive = false;
+    private String bgc;
+
+
 
     public String getClassId() {
-        if (classId != null) {
+        if (classId == null) {
             classId = UUID.randomUUID().toString().replaceAll("-","");
         }
         return classId;
@@ -35,29 +43,7 @@ public class Class  implements Serializable{
         this.classId = classId == null ? null : classId.trim();
     }
 
-    public String getCodeId() {
-        return codeId;
-    }
 
-    public void setCodeId(String codeId) {
-        this.codeId = codeId == null ? null : codeId.trim();
-    }
-
-    public String getTotalAttendanceId() {
-        return totalAttendanceId;
-    }
-
-    public void setTotalAttendanceId(String totalAttendanceId) {
-        this.totalAttendanceId = totalAttendanceId == null ? null : totalAttendanceId.trim();
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId == null ? null : userId.trim();
-    }
 
     public String getClassName() {
         return className;
@@ -67,12 +53,12 @@ public class Class  implements Serializable{
         this.className = className == null ? null : className.trim();
     }
 
-    public String getSerialNumber() {
+    public Integer getSerialNumber() {
         return serialNumber;
     }
 
-    public void setSerialNumber(String serialNumber) {
-        this.serialNumber = serialNumber == null ? null : serialNumber.trim();
+    public void setSerialNumber(Integer serialNumber) {
+        this.serialNumber = serialNumber ;
     }
 
     public Integer getAtotalCheckNumber() {
@@ -98,4 +84,53 @@ public class Class  implements Serializable{
     public void setIsArchive(Boolean isArchive) {
         this.isArchive = isArchive;
     }
+    public String getBgc() {
+        return bgc;
+    }
+
+    public void setBgc(String bgc) {
+        this.bgc = bgc == null ? null : bgc.trim();
+    }
+
+
+    public InviteCode getInviteCode() {
+        return inviteCode;
+    }
+
+    public void setInviteCode(InviteCode inviteCode) {
+        this.inviteCode = inviteCode;
+    }
+
+    public TotalAttendanceInfomation getTotalAttendanceInfomation() {
+        return totalAttendanceInfomation;
+    }
+
+    public void setTotalAttendanceInfomation(TotalAttendanceInfomation totalAttendanceInfomation) {
+        this.totalAttendanceInfomation = totalAttendanceInfomation;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public List<AttendanceRecord> getAttendanceRecordList() {
+        return attendanceRecordList;
+    }
+
+    public void setAttendanceRecordList(List<AttendanceRecord> attendanceRecordList) {
+        this.attendanceRecordList = attendanceRecordList;
+    }
+
+    public List<User> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(List<User> userList) {
+        this.userList = userList;
+    }
+
 }

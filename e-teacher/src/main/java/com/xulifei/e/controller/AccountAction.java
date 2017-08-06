@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -18,25 +19,53 @@ public class AccountAction extends BaseAction {
     @Resource
     private AccountService accountService;
 
-    @RequestMapping(value="/login",produces="application/json;charset=UTF-8")
+    @RequestMapping(value="/loginByAccountAndPwd",produces="application/json;charset=UTF-8")
     @ResponseBody
-    public Object login(User user, HttpSession session) {
+    public Object loginByAccountAndPwd(User user, HttpSession session) {
+        try {
+        Map  map=  new HashMap<String,Object>();
 
-        Map  map=  new HashMap<String,User>();
-        System.out.println("---action.account:"+user);
-        System.out.println("账号"+user.getAccount()+"密码"+user.getPwd());
-        User acc= accountService.login(user);
-        if(acc!=null){
+        List<User> userList= accountService.loginByAccountAndPwd(user);
+        if(userList.size()>0){
             //存session
-            session.setAttribute("user", acc);
-            map.put("isLogin",true);
-            map.put("user",acc);
+            session.setAttribute("user",userList.get(0));
+            map.put("isloginSuccess",true);
+            map.put("user",userList.get(0));
             return map;
         }
-
-       map.put("isLogin",false);
-        map.put("user",acc);
+            map.put("isloginSuccess",false);
             return map;
+
+        }catch (Exception e){
+     throw new RuntimeException(e);
+ }
+
+
+    }
+    @RequestMapping(value="/loginByAccount",produces="application/json;charset=UTF-8")
+    @ResponseBody
+    public Object loginByAccount(User user, HttpSession session) {
+try {
+    Map  map=  new HashMap<String,Object>();
+    System.out.println("---action.account:"+user);
+    System.out.println("账号"+user.getAccount());
+    List<User> userList= accountService.loginByAccount(user);
+    System.out.println(userList.size());
+    System.out.println(userList.get(0).getAccount());
+    if(userList.size()>0){
+        //存session
+        session.setAttribute("user",userList.get(0));
+        map.put("isloginSuccess",true);
+        map.put("user",userList.get(0));
+        return map;
+    }
+
+    map.put("isloginSuccess",false);
+    return map;
+
+}catch (Exception e){
+    throw  new RuntimeException(e);
+}
 
 
     }
@@ -44,37 +73,51 @@ public class AccountAction extends BaseAction {
     @RequestMapping(value="/resetPwd",produces="application/json;charset=UTF-8")
     @ResponseBody //如果返回json格式，需要这个注解，这里用来测试环境
     public Object updatePwdByAccount(User user){
-        System.out.println(user.getAccount());
-        System.out.println(user.getPwd());
-        boolean isUpdateSuccess = accountService.updatePwdByAccount(user);
-       Map map = new HashMap<String,Object>();
-       map.put("isUpdateSuccess",isUpdateSuccess);
-        return map;
+        try {
+            System.out.println(user.getAccount());
+            System.out.println(user.getPwd());
+            boolean isUpdateSuccess = accountService.updatePwdByAccount(user);
+            Map map = new HashMap<String,Object>();
+            map.put("isUpdateSuccess",isUpdateSuccess);
+            return map;
+        }catch (Exception e){
+             throw new RuntimeException(e);
+        }
+
     }
 
     @RequestMapping(value="/registerAccountIsExist",produces="application/json;charset=UTF-8")
     @ResponseBody
     public Object registerAccountIsExist(User user) {
+try {
+    Boolean registerAccountIsExist = accountService.registerAccountIsExist(user);
+    Map map = new HashMap<String,Object>();
+    map.put("registerAccountIsExist",registerAccountIsExist);
+    return map;
 
-        Boolean registerAccountIsExist = accountService.registerAccountIsExist(user);
-        Map map = new HashMap<String,Object>();
-        map.put("registerAccountIsExist",registerAccountIsExist);
-        return map;
+}catch (Exception e){
+    throw  new RuntimeException(e);
+}
 
     }
     @RequestMapping(value="/register",produces="application/json;charset=UTF-8")
     @ResponseBody
     public Object register(User user) {
-        user.setUserId(user.getUserId());
-        Boolean isRegisterSuccess = accountService.register(user);
-        Map map = new HashMap<String,Object>();
-        if (isRegisterSuccess == true){
+        try {
+            user.setUserId(user.getUserId());
+            Boolean isRegisterSuccess = accountService.register(user);
+            Map map = new HashMap<String,Object>();
+            if (isRegisterSuccess == true){
+                map.put("isRegisterSuccess",isRegisterSuccess);
+                map.put("user",user);
+            }
             map.put("isRegisterSuccess",isRegisterSuccess);
-            map.put("user",user);
-        }
-         map.put("isRegisterSuccess",isRegisterSuccess);
 
-        return map;
+            return map;
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
+
 
     }
 }

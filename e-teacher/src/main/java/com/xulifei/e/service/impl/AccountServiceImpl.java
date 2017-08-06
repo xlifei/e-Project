@@ -4,15 +4,25 @@ import com.xulifei.e.entity.User;
 import com.xulifei.e.service.AccountService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by john on 2017/7/28.
  */
 @Service("accountService")
 public class AccountServiceImpl extends BaseServiceImpl<User> implements AccountService {
     @Override
-    public User login(User user) {
-     return userMapper.login(user);
+        public List<User> loginByAccountAndPwd(User user)
+        {
+            return userMapper.findUserByAccountAndPwd(user);
+        }
+
+        @Override
+        public List<User> loginByAccount(User user) {
+            List<User> userList = userMapper.findUserByAccount(user);
+            return userList;
     }
+
     @Override
     public boolean updatePwdByAccount(User user) {
 

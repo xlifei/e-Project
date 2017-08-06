@@ -29,6 +29,7 @@ public class User implements Serializable {
 
     private String researchDirection;
 
+
     public String getUserId() {
         if (userId == null) {
             userId = UUID.randomUUID().toString().replaceAll("-","");
@@ -127,4 +128,6 @@ public class User implements Serializable {
     public void setResearchDirection(String researchDirection) {
         this.researchDirection = researchDirection == null ? null : researchDirection.trim();
     }
+
+
 }

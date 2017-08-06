@@ -11,9 +11,10 @@
     <title>Title</title>
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/account/doAjax.action" method="post" >
-账号：<input type="text" name="account"><br>
-密码：<input type="password" name="pwd">
+<form action="${pageContext.request.contextPath}/Class/addClass.action" method="post" >
+账号：<input type="text" name="inviteCode.code"><br>
+密码：<input type="text" name="user.userId">
+     <input type="text" name="className">
 <input type="submit" value="提交">
 </form>
 </body>

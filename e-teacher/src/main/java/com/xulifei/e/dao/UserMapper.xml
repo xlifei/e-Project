@@ -183,8 +183,11 @@
 
 
   <!-- 用户登陆 -->
-  <select id="login" parameterType="user" resultMap="BaseResultMap">
+  <select id="findUserByAccountAndPwd" parameterType="user" resultMap="BaseResultMap">
   	select * from USER where account =#{account} and pwd =#{pwd}
+  </select>
+  <select id="findUserByAccount" parameterType="user" resultMap="BaseResultMap">
+    select * from USER where account =#{account}
   </select>
   <update id="updatePwdByAccount"  parameterType="com.xulifei.e.entity.User">
     update user
@@ -192,8 +195,6 @@
     pwd = #{pwd,jdbcType=VARCHAR}
     where  account = #{account,jdbcType=VARCHAR}
   </update>
-  <select id="findByAccount" parameterType="user" resultType="int">
-    select COUNT(*) from USER where account =#{account}
-  </select>
+
 
 </mapper>

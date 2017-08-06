@@ -2,15 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xulifei.e.dao.PersonalAttendanceInformationTableMapper">
   <resultMap id="BaseResultMap" type="com.xulifei.e.entity.PersonalAttendanceInformationTable">
-    <id column="class_id" jdbcType="VARCHAR" property="classId" />
-    <id column="user_id" jdbcType="VARCHAR" property="userId" />
-    <result column="total_number_attendance" jdbcType="INTEGER" property="totalNumberAttendance" />
-    <result column="attendance_number" jdbcType="INTEGER" property="attendanceNumber" />
-    <result column="absenteeism" jdbcType="INTEGER" property="absenteeism" />
-    <result column="late_number" jdbcType="INTEGER" property="lateNumber" />
-    <result column="kuang_number" jdbcType="INTEGER" property="kuangNumber" />
-    <result column="leave_number" jdbcType="INTEGER" property="leaveNumber" />
-  </resultMap>
+  <id column="class_id" jdbcType="VARCHAR" property="classId" />
+  <id column="user_id" jdbcType="VARCHAR" property="userId" />
+  <result column="total_number_attendance" jdbcType="INTEGER" property="totalNumberAttendance" />
+  <result column="attendance_number" jdbcType="INTEGER" property="attendanceNumber" />
+  <result column="absenteeism" jdbcType="INTEGER" property="absenteeism" />
+  <result column="late_number" jdbcType="INTEGER" property="lateNumber" />
+  <result column="kuang_number" jdbcType="INTEGER" property="kuangNumber" />
+  <result column="leave_number" jdbcType="INTEGER" property="leaveNumber" />
+</resultMap>
   <sql id="Base_Column_List">
     class_id, user_id, total_number_attendance, attendance_number, absenteeism, late_number, 
     kuang_number, leave_number
@@ -22,7 +22,7 @@
     where class_id = #{classId,jdbcType=VARCHAR}
       and user_id = #{userId,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTableKey">
+  <delete id="delete" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTableKey">
     delete from personal_attendance_information_table
     where class_id = #{classId,jdbcType=VARCHAR}
       and user_id = #{userId,jdbcType=VARCHAR}
@@ -63,4 +63,13 @@
     where class_id = #{classId,jdbcType=VARCHAR}
       and user_id = #{userId,jdbcType=VARCHAR}
   </update>
+
+  <insert id="insert" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable" >
+    insert into personal_attendance_information_table ( class_id, user_id, total_number_attendance, attendance_number, absenteeism, late_number,
+    kuang_number, leave_number)
+    values ( #{classId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR},#{totalNumberAttendance,jdbcType=INTEGER},
+   #{attendanceNumber,jdbcType=INTEGER},#{absenteeism,jdbcType=INTEGER},#{lateNumber,jdbcType=INTEGER},
+    #{kuangNumber,jdbcType=INTEGER},#{leaveNumber,jdbcType=INTEGER})
+  </insert>
+
 </mapper>

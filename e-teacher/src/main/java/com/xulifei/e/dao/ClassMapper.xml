@@ -3,19 +3,23 @@
 <mapper namespace="com.xulifei.e.dao.ClassMapper">
   <resultMap id="BaseResultMap" type="com.xulifei.e.entity.Class">
     <id column="class_id" jdbcType="VARCHAR" property="classId" />
-    <result column="code_id" jdbcType="VARCHAR" property="codeId" />
-    <result column="total_attendance_id" jdbcType="VARCHAR" property="totalAttendanceId" />
-    <result column="user_id" jdbcType="VARCHAR" property="userId" />
     <result column="class_name" jdbcType="VARCHAR" property="className" />
-    <result column="serial_number" jdbcType="VARCHAR" property="serialNumber" />
+    <result column="serial_number" jdbcType="INTEGER" property="serialNumber" />
     <result column="atotal_check_number" jdbcType="INTEGER" property="atotalCheckNumber" />
     <result column="member_number" jdbcType="INTEGER" property="memberNumber" />
     <result column="is_archive" jdbcType="BIT" property="isArchive" />
+    <result column="bgc" jdbcType="VARCHAR" property="bgc"/>
+    <association property="inviteCode" resultMap="com.xulifei.e.dao.InviteCodeMapper.BaseResultMap"></association>
+    <association property="totalAttendanceInfomation" resultMap="com.xulifei.e.dao.TotalAttendanceInfomationMapper.BaseResultMap"></association>
+<association property="user" resultMap="com.xulifei.e.dao.UserMapper.BaseResultMap"></association>
+<collection property="attendanceRecordList" resultMap="com.xulifei.e.dao.AttendanceRecordMapper.BaseResultMap"></collection>
+ <collection property="userList" resultMap="com.xulifei.e.dao.UserMapper.BaseResultMap"></collection>
   </resultMap>
   <sql id="Base_Column_List">
     class_id, code_id, total_attendance_id, user_id, class_name, serial_number, atotal_check_number, 
-    member_number, is_archive
+    member_number, is_archive,bgc
   </sql>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
@@ -26,23 +30,20 @@
     delete from class
     where class_id = #{classId,jdbcType=VARCHAR}
   </delete>
-  <update id="updateByPrimaryKeySelective" parameterType="com.xulifei.e.entity.Class">
+  <delete id="delete" parameterType="class">
+    delete from class
+    where class_id = #{classId,jdbcType=VARCHAR}
+  </delete>
+
+
+  <update id="update" parameterType="com.xulifei.e.entity.Class">
     update class
     <set>
-      <if test="codeId != null">
-        code_id = #{codeId,jdbcType=VARCHAR},
-      </if>
-      <if test="totalAttendanceId != null">
-        total_attendance_id = #{totalAttendanceId,jdbcType=VARCHAR},
-      </if>
-      <if test="userId != null">
-        user_id = #{userId,jdbcType=VARCHAR},
-      </if>
       <if test="className != null">
         class_name = #{className,jdbcType=VARCHAR},
       </if>
       <if test="serialNumber != null">
-        serial_number = #{serialNumber,jdbcType=VARCHAR},
+        serial_number = #{serialNumber,jdbcType=INTEGER},
       </if>
       <if test="atotalCheckNumber != null">
         atotal_check_number = #{atotalCheckNumber,jdbcType=INTEGER},
@@ -53,6 +54,9 @@
       <if test="isArchive != null">
         is_archive = #{isArchive,jdbcType=BIT},
       </if>
+      <if test="bgc != null">
+        bgc = #{bgc,jdbcType=VARCHAR},
+      </if>
     </set>
     where class_id = #{classId,jdbcType=VARCHAR}
   </update>
@@ -62,10 +66,166 @@
       total_attendance_id = #{totalAttendanceId,jdbcType=VARCHAR},
       user_id = #{userId,jdbcType=VARCHAR},
       class_name = #{className,jdbcType=VARCHAR},
-      serial_number = #{serialNumber,jdbcType=VARCHAR},
+      serial_number = #{serialNumber,jdbcType=INTEGER},
       atotal_check_number = #{atotalCheckNumber,jdbcType=INTEGER},
       member_number = #{memberNumber,jdbcType=INTEGER},
-      is_archive = #{isArchive,jdbcType=BIT}
+      is_archive = #{isArchive,jdbcType=BIT},
+      bgc =  #{bgc,jdbcType=VARCHAR}
     where class_id = #{classId,jdbcType=VARCHAR}
   </update>
+
+  <insert id="insert" parameterType="class" >
+
+    insert into class ( class_id, code_id, total_attendance_id, user_id, class_name, serial_number, atotal_check_number,
+    member_number, is_archive,bgc)
+    values (#{classId,jdbcType=VARCHAR}, #{inviteCode.codeId,jdbcType=VARCHAR},#{totalAttendanceInfomation.totalAttendanceId,jdbcType=VARCHAR},
+    #{user.userId,jdbcType=VARCHAR},#{className,jdbcType=VARCHAR}, #{serialNumber,jdbcType=INTEGER},
+   #{atotalCheckNumber,jdbcType=INTEGER},#{memberNumber,jdbcType=INTEGER},#{isArchive,jdbcType=BIT}, #{bgc,jdbcType=VARCHAR})
+  </insert>
+
+
+  <insert id="insertSelective" parameterType="class" >
+
+    insert into class
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="classId != null" >
+        class_id,
+      </if>
+      <if test="codeId != null" >
+        code_id,
+      </if>
+      <if test="totalAttendanceId != null" >
+        total_attendance_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="className != null" >
+        class_name,
+      </if>
+      <if test="serialNumber != null" >
+        serial_number,
+      </if>
+      <if test="atotalCheckNumber != null" >
+        atotal_check_number,
+      </if>
+      <if test="memberNumber != null" >
+        member_number,
+      </if>
+      <if test="isArchive != null" >
+        is_archive,
+      </if>
+      <if test="bgc != null" >
+        bgc,
+      </if>
+
+    </trim>
+
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="classId != null" >
+        #{classId,jdbcType=VARCHAR},
+      </if>
+      <if test="codeId != null" >
+        #{codeId,jdbcType=VARCHAR},
+      </if>
+      <if test="totalAttendanceId != null" >
+        #{totalAttendanceId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="className != null" >
+        #{className,jdbcType=VARCHAR},
+      </if>
+      <if test="serialNumber != null" >
+        #{serialNumber,jdbcType=INTEGER},
+      </if>
+      <if test="atotalCheckNumber != null" >
+        #{atotalCheckNumber,jdbcType=INTEGER},
+      </if>
+      <if test="memberNumber != null" >
+        #{memberNumber,jdbcType=INTEGER},
+      </if>
+      <if test="isArchive != null" >
+        #{isArchive,jdbcType=BIT}
+      </if>
+      <if test="bgc != null" >
+        #{bgc,jdbcType=VARCHAR}
+      </if>
+    </trim>
+  </insert>
+
+  <select id="findAll" parameterType="java.lang.String" resultMap="BaseResultMap">
+ SELECT cp.class_id, cp.code_id, cp.total_attendance_id, cp.user_id, cp.class_name, cp.serial_number, cp.atotal_check_number,
+    cp.member_number,cp.is_archive,cp.bgc,ic.code,ic.status,u.user_name FROM  (SELECT c.class_id, c.code_id, c.total_attendance_id, c.user_id, c.class_name, c.serial_number, c.atotal_check_number,
+    c.member_number,c.is_archive,c.bgc FROM class c LEFT OUTER JOIN personal_attendance_information_table pinfo ON c.class_id = pinfo.class_id
+    WHERE  c.user_id =  #{userId,jdbcType=VARCHAR} OR pinfo.user_id =  #{userId,jdbcType=VARCHAR}) cp
+      ,invite_code ic,USER u
+      WHERE cp.code_id= ic.code_id AND cp.user_id = u.user_id
+       ORDER BY cp.serial_number ASC;
+  </select>
+  <select id="findArchiveClassRoom" parameterType="class" resultMap="BaseResultMap">
+SELECT cp.class_id,cp.class_name,cp.member_number,cp.bgc ,cp.user_id,ic.code FROM (SELECT c.class_id,c.class_name,c.member_number,c.bgc ,c.user_id,c.code_id,c.serial_number FROM class c LEFT OUTER JOIN personal_attendance_information_table pinfo ON c.class_id = pinfo.class_id
+
+    WHERE c.is_archive=#{isArchive,jdbcType=BIT} AND c.user_id = #{user.userId,jdbcType=VARCHAR} OR pinfo.user_id =  #{user.userId,jdbcType=VARCHAR}
+            )cp,invite_code ic
+            WHERE cp.code_id = ic.code_id ORDER BY cp.serial_number ASC
+</select>
+
+  <select id="findSum" parameterType="java.lang.String" resultType="int">
+    SELECT COUNT(cp.class_id) FROM  (SELECT c.class_id, c.code_id, c.total_attendance_id, c.user_id, c.class_name, c.serial_number, c.atotal_check_number,
+    c.member_number,c.is_archive,c.bgc FROM class c LEFT OUTER JOIN personal_attendance_information_table pinfo ON c.class_id = pinfo.class_id
+    WHERE  c.user_id = #{userId,jdbcType=VARCHAR} OR pinfo.user_id =  #{userId,jdbcType=VARCHAR}) cp
+      ,invite_code ic,USER u
+      WHERE cp.code_id= ic.code_id AND cp.user_id = u.user_id
+       ORDER BY cp.serial_number ASC;
+  </select>
+
+  <update id="updateCurrentSerialNumber" parameterType="java.lang.String" >
+
+UPDATE class
+    SET  serial_number = (SELECT c.serial_number FROM (SELECT serial_number FROM class  WHERE class_id = #{classId,jdbcType=VARCHAR})c)-1
+    WHERE class_id = #{classId,jdbcType=VARCHAR}
+
+  </update>
+
+  <update id="updatePreSerialNumber" parameterType="java.lang.String" >
+
+UPDATE class
+    SET  serial_number = (SELECT c.serial_number FROM (SELECT serial_number FROM class  WHERE class_id = #{classId,jdbcType=VARCHAR})c)+1
+    WHERE class_id = #{classId,jdbcType=VARCHAR}
+
+  </update>
+
+  <update id="updateClassName" parameterType="class" >
+
+    update class
+    set  class_name =  #{className,jdbcType=VARCHAR}
+    where class_id = #{classId,jdbcType=VARCHAR}
+
+  </update>
+
+  <update id="updateIsArchive" parameterType="class">
+        update class
+    set  is_archive = #{isArchive,jdbcType=BIT}
+    where class_id = #{classId,jdbcType=VARCHAR}
+  </update>
+
+    <select id="findByCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+     SELECT       ci.class_id,ci.class_name, ci.serial_number, ci.atotal_check_number,
+    ci.member_number, ci.is_archive,ci.bgc,ci.user_id,u.user_name FROM
+        (select
+         c.class_id,c.user_id, c.class_name, c.serial_number, c.atotal_check_number,
+    c.member_number, c.is_archive,c.bgc
+        from class c
+        where c.code_id IN (select code_id from invite_code WHERE  code =#{code,jdbcType=VARCHAR})
+        ) ci , user u
+        WHERE  ci.user_id = u.user_id
+    </select>
+<update id="updateMemberByClassId" parameterType="java.lang.String" >
+UPDATE class cl
+    SET  cl.member_number = (SELECT c.member_number FROM (SELECT member_number FROM class  WHERE class_id = #{classId,jdbcType=VARCHAR})c)+1
+    WHERE cl.class_id = #{classId,jdbcType=VARCHAR}
+</update>
+
 </mapper>
