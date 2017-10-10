@@ -1,18 +1,30 @@
 package com.xulifei.e.entity;
 
+import java.util.UUID;
+
 public class PersonalAttendanceInformationTable extends PersonalAttendanceInformationTableKey {
     private static final long serialVersionUID = -857619790822353952L;
+    private String personAttendanceInformationId;
     private Integer totalNumberAttendance;
 
     private Integer attendanceNumber = 0;
-
-    private Integer absenteeism =0;
 
     private Integer lateNumber =0;
 
     private Integer kuangNumber =0;
 
     private Integer leaveNumber =0;
+
+    public String getPersonAttendanceInformationId() {
+        if (personAttendanceInformationId == null) {
+            personAttendanceInformationId = UUID.randomUUID().toString().replaceAll("-","");
+        }
+        return personAttendanceInformationId;
+    }
+
+    public void setPersonAttendanceInformationId(String personAttendanceInformationId) {
+        this.personAttendanceInformationId = personAttendanceInformationId == null ? null : personAttendanceInformationId.trim();
+    }
 
     public Integer getTotalNumberAttendance() {
         return totalNumberAttendance;
@@ -30,13 +42,6 @@ public class PersonalAttendanceInformationTable extends PersonalAttendanceInform
         this.attendanceNumber = attendanceNumber;
     }
 
-    public Integer getAbsenteeism() {
-        return absenteeism;
-    }
-
-    public void setAbsenteeism(Integer absenteeism) {
-        this.absenteeism = absenteeism;
-    }
 
     public Integer getLateNumber() {
         return lateNumber;

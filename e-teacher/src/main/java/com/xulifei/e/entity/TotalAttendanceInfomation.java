@@ -8,20 +8,19 @@ public class TotalAttendanceInfomation implements Serializable {
     private static final long serialVersionUID = -6823313179962164358L;
     private String totalAttendanceId;
 
-    private Integer atotalCheckNumber;
+    private Integer atotalCheckNumber ;
 
-    private Integer totalAttendanceNumber;
+    private Integer totalAttendanceNumber ;
 
-    private Integer totalAbsenteeism;
 
-    private Integer totalLateNumber;
+    private Integer totalLateNumber ;
 
-    private Integer totalKuangNumber;
+    private Integer totalKuangNumber ;
 
-    private Integer totalLeaveNumber;
+    private Integer totalLeaveNumber ;
 
     public String getTotalAttendanceId() {
-        if (totalAttendanceId != null) {
+        if (totalAttendanceId == null) {
             totalAttendanceId = UUID.randomUUID().toString().replaceAll("-","");
         }
         return totalAttendanceId;
@@ -47,13 +46,7 @@ public class TotalAttendanceInfomation implements Serializable {
         this.totalAttendanceNumber = totalAttendanceNumber;
     }
 
-    public Integer getTotalAbsenteeism() {
-        return totalAbsenteeism;
-    }
 
-    public void setTotalAbsenteeism(Integer totalAbsenteeism) {
-        this.totalAbsenteeism = totalAbsenteeism;
-    }
 
     public Integer getTotalLateNumber() {
         return totalLateNumber;

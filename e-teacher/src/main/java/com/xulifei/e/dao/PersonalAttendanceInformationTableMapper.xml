@@ -6,14 +6,14 @@
   <id column="user_id" jdbcType="VARCHAR" property="userId" />
   <result column="total_number_attendance" jdbcType="INTEGER" property="totalNumberAttendance" />
   <result column="attendance_number" jdbcType="INTEGER" property="attendanceNumber" />
-  <result column="absenteeism" jdbcType="INTEGER" property="absenteeism" />
   <result column="late_number" jdbcType="INTEGER" property="lateNumber" />
   <result column="kuang_number" jdbcType="INTEGER" property="kuangNumber" />
   <result column="leave_number" jdbcType="INTEGER" property="leaveNumber" />
+    <result column="person_attendance_information_id" jdbcType="VARCHAR" property="personAttendanceInformationId" />
 </resultMap>
   <sql id="Base_Column_List">
-    class_id, user_id, total_number_attendance, attendance_number, absenteeism, late_number, 
-    kuang_number, leave_number
+    class_id, user_id, total_number_attendance, attendance_number,  late_number,
+    kuang_number, leave_number,person_attendance_information_id
   </sql>
   <select id="selectByPrimaryKey" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTableKey" resultMap="BaseResultMap">
     select 
@@ -22,10 +22,14 @@
     where class_id = #{classId,jdbcType=VARCHAR}
       and user_id = #{userId,jdbcType=VARCHAR}
   </select>
-  <delete id="delete" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTableKey">
+  <delete id="delete" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable">
     delete from personal_attendance_information_table
     where class_id = #{classId,jdbcType=VARCHAR}
       and user_id = #{userId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteAllByClassId" parameterType="java.lang.String">
+    DELETE FROM personal_attendance_information_table
+    WHERE class_id = #{classId,jdbcType=VARCHAR}
   </delete>
   <update id="updateByPrimaryKeySelective" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable">
     update personal_attendance_information_table
@@ -36,9 +40,7 @@
       <if test="attendanceNumber != null">
         attendance_number = #{attendanceNumber,jdbcType=INTEGER},
       </if>
-      <if test="absenteeism != null">
-        absenteeism = #{absenteeism,jdbcType=INTEGER},
-      </if>
+
       <if test="lateNumber != null">
         late_number = #{lateNumber,jdbcType=INTEGER},
       </if>
@@ -56,7 +58,6 @@
     update personal_attendance_information_table
     set total_number_attendance = #{totalNumberAttendance,jdbcType=INTEGER},
       attendance_number = #{attendanceNumber,jdbcType=INTEGER},
-      absenteeism = #{absenteeism,jdbcType=INTEGER},
       late_number = #{lateNumber,jdbcType=INTEGER},
       kuang_number = #{kuangNumber,jdbcType=INTEGER},
       leave_number = #{leaveNumber,jdbcType=INTEGER}
@@ -65,11 +66,123 @@
   </update>
 
   <insert id="insert" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable" >
-    insert into personal_attendance_information_table ( class_id, user_id, total_number_attendance, attendance_number, absenteeism, late_number,
-    kuang_number, leave_number)
+    insert into personal_attendance_information_table ( class_id, user_id, total_number_attendance, attendance_number, late_number,
+    kuang_number, leave_number,person_attendance_information_id)
     values ( #{classId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR},#{totalNumberAttendance,jdbcType=INTEGER},
-   #{attendanceNumber,jdbcType=INTEGER},#{absenteeism,jdbcType=INTEGER},#{lateNumber,jdbcType=INTEGER},
-    #{kuangNumber,jdbcType=INTEGER},#{leaveNumber,jdbcType=INTEGER})
+   #{attendanceNumber,jdbcType=INTEGER},#{lateNumber,jdbcType=INTEGER},
+    #{kuangNumber,jdbcType=INTEGER},#{leaveNumber,jdbcType=INTEGER},#{personAttendanceInformationId,jdbcType=VARCHAR})
   </insert>
+
+  <select id="findAllByClassId" parameterType="java.lang.String" resultType="java.lang.String">
+    SELECT user_id FROM   personal_attendance_information_table WHERE  class_id = #{classId}
+  </select>
+
+  <select id="selectList" parameterType="map" resultMap="BaseResultMap">
+    SELECT person_attendance_information_id,total_number_attendance,attendance_number,kuang_number FROM  personal_attendance_information_table
+    WHERE  class_id = #{classId} AND  user_id IN
+    <foreach collection="userIds" open="(" close=")" separator="," item="userIdList">
+      #{userIdList}
+    </foreach>
+
+  </select>
+
+
+  <update id="updateFinshByPersonAttendanceInformationId" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable">
+    update personal_attendance_information_table
+    set total_number_attendance = #{totalNumberAttendance,jdbcType=INTEGER},
+    attendance_number = #{attendanceNumber,jdbcType=INTEGER}
+    WHERE person_attendance_information_id = #{personAttendanceInformationId,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateUnFinshByPersonAttendanceInformationId" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable">
+    update personal_attendance_information_table
+    set kuang_number = #{kuangNumber,jdbcType=INTEGER}
+    WHERE person_attendance_information_id = #{personAttendanceInformationId,jdbcType=VARCHAR}
+  </update>
+  <select id="findByClassIdAndUserId" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable" resultMap="BaseResultMap">
+    SELECT * FROM  personal_attendance_information_table WHERE  class_id = #{classId,jdbcType=VARCHAR}
+      and user_id = #{userId,jdbcType=VARCHAR}
+  </select>
+
+
+
+  <update id="updateByIdForchuqin" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable">
+    UPDATE  personal_attendance_information_table
+   set total_number_attendance = #{totalNumberAttendance,jdbcType=INTEGER},
+    attendance_number = #{attendanceNumber,jdbcType=INTEGER}
+ WHERE person_attendance_information_id = #{personAttendanceInformationId,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateByIdForchidao" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable">
+        UPDATE  personal_attendance_information_table
+    set total_number_attendance = #{totalNumberAttendance,jdbcType=INTEGER},
+    late_number = #{lateNumber,jdbcType=INTEGER}
+ WHERE person_attendance_information_id = #{personAttendanceInformationId,jdbcType=VARCHAR}
+
+  </update>
+
+  <update id="updateByIdForkuang" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable">
+     UPDATE  personal_attendance_information_table
+  set total_number_attendance = #{totalNumberAttendance,jdbcType=INTEGER},
+    kuang_number = #{kuangNumber,jdbcType=INTEGER}
+ WHERE person_attendance_information_id = #{personAttendanceInformationId,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateByIdForqingjia" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable">
+       UPDATE  personal_attendance_information_table
+  set total_number_attendance = #{totalNumberAttendance,jdbcType=INTEGER},
+    leave_number = #{leaveNumber,jdbcType=INTEGER}
+ WHERE person_attendance_information_id = #{personAttendanceInformationId,jdbcType=VARCHAR}
+
+  </update>
+
+  <update id="updateAttendanceNumberPlus" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable">
+         UPDATE  personal_attendance_information_table
+     set attendance_number= #{attendanceNumber,jdbcType=INTEGER},
+    leave_number = #{leaveNumber,jdbcType=INTEGER}
+ WHERE person_attendance_information_id = #{personAttendanceInformationId,jdbcType=VARCHAR}
+
+  </update>
+
+
+  <update id="updateAttendanceAndLeaveNumber" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable">
+    UPDATE personal_attendance_information_table
+    SET  attendance_number = (SELECT p.attendance_number FROM (SELECT attendance_number FROM personal_attendance_information_table  WHERE class_id = #{classId,jdbcType=VARCHAR} AND  user_id =  #{userId,jdbcType=VARCHAR})p)+1,
+    leave_number = (SELECT p.leave_number FROM (SELECT leave_number FROM personal_attendance_information_table  WHERE class_id = #{classId,jdbcType=VARCHAR} AND  user_id =  #{userId,jdbcType=VARCHAR})p)-1
+
+    WHERE class_id = #{classId,jdbcType=VARCHAR} AND  user_id =  #{userId,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateLateAndKuangNumber" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable">
+   UPDATE personal_attendance_information_table
+    SET  late_number = (SELECT p.late_number FROM (SELECT late_number FROM personal_attendance_information_table  WHERE class_id = #{classId,jdbcType=VARCHAR} AND  user_id =  #{userId,jdbcType=VARCHAR})p)+1,
+    kuang_number = (SELECT p.kuang_number FROM (SELECT kuang_number FROM personal_attendance_information_table  WHERE class_id = #{classId,jdbcType=VARCHAR} AND  user_id =  #{userId,jdbcType=VARCHAR})p)-1
+
+    WHERE class_id = #{classId,jdbcType=VARCHAR} AND  user_id =  #{userId,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateKuangAndAttendanceNumber" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable">
+   UPDATE personal_attendance_information_table
+    SET  kuang_number = (SELECT p.kuang_number FROM (SELECT kuang_number FROM personal_attendance_information_table  WHERE class_id = #{classId,jdbcType=VARCHAR} AND  user_id =  #{userId,jdbcType=VARCHAR})p)+1,
+    attendance_number = (SELECT p.attendance_number FROM (SELECT attendance_number FROM personal_attendance_information_table  WHERE class_id = #{classId,jdbcType=VARCHAR} AND  user_id =  #{userId,jdbcType=VARCHAR})p)-1
+
+    WHERE class_id = #{classId,jdbcType=VARCHAR} AND  user_id =  #{userId,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateLeaveAndLateNumber" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable">
+     UPDATE personal_attendance_information_table
+    SET  leave_number = (SELECT p.leave_number FROM (SELECT leave_number FROM personal_attendance_information_table  WHERE class_id = #{classId,jdbcType=VARCHAR} AND  user_id =  #{userId,jdbcType=VARCHAR})p)+1,
+    late_number = (SELECT p.late_number FROM (SELECT late_number FROM personal_attendance_information_table  WHERE class_id = #{classId,jdbcType=VARCHAR} AND  user_id =  #{userId,jdbcType=VARCHAR})p)-1
+
+    WHERE class_id = #{classId,jdbcType=VARCHAR} AND  user_id =  #{userId,jdbcType=VARCHAR}
+  </update>
+
+<delete id="deleteByClassIdAndUserId" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable">
+    DELETE FROM personal_attendance_information_table
+    WHERE class_id = #{classId,jdbcType=VARCHAR} AND  user_id = #{userId,jdbcType=VARCHAR}
+</delete>
+
+
+
 
 </mapper>

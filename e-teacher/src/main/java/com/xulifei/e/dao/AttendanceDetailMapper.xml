@@ -6,9 +6,12 @@
     <result column="attendance_id" jdbcType="VARCHAR" property="attendanceId" />
     <result column="attendance_status" jdbcType="VARCHAR" property="attendanceStatus" />
     <result column="detail_user_id" jdbcType="VARCHAR" property="detailUserId" />
+    <result column="sis_finsh" jdbcType="BIT" property="isFinsh" />
+<association property="user" resultMap="com.xulifei.e.dao.UserMapper.BaseResultMap"></association>
+
   </resultMap>
   <sql id="Base_Column_List">
-    attendance_detail_id, attendance_id, attendance_status, detail_user_id
+    attendance_detail_id, attendance_id, attendance_status, detail_user_id,sis_finsh
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
@@ -20,7 +23,39 @@
     delete from attendance_detail
     where attendance_detail_id = #{attendanceDetailId,jdbcType=VARCHAR}
   </delete>
-  <update id="updateByPrimaryKeySelective" parameterType="com.xulifei.e.entity.AttendanceDetail">
+  <delete id="delete" parameterType="attendanceDetail">
+        delete from attendance_detail
+    where attendance_id = #{attendanceId,jdbcType=VARCHAR} AND   detail_user_id = #{detailUserId,jdbcType=VARCHAR}
+  </delete>
+
+  <delete id="deleteList">
+           delete from attendance_detail
+          where attendance_detail_id IN
+
+    <foreach collection="list"  open="(" close=")"  separator=","  item="item">
+      #{item.attendanceDetailId}
+    </foreach>
+
+  </delete>
+  <delete id="deleteListByArgString">
+  delete from attendance_detail
+  where attendance_id IN
+
+  <foreach collection="list" open="(" close=")" separator="," item="ids">
+    #{ids}
+  </foreach>
+
+</delete>
+  <delete id="deleteListByAttendanceDetailIdArgString">
+    delete from attendance_detail
+    where attendance_detail_id IN
+
+    <foreach collection="list" open="(" close=")" separator="," item="ids">
+      #{ids}
+    </foreach>
+
+  </delete>
+  <update id="update" parameterType="com.xulifei.e.entity.AttendanceDetail">
     update attendance_detail
     <set>
       <if test="attendanceId != null">
@@ -32,6 +67,10 @@
       <if test="detailUserId != null">
         detail_user_id = #{detailUserId,jdbcType=VARCHAR},
       </if>
+      <if test="isFinsh != null">
+      sis_finsh = #{isFinsh,jdbcType=BIT},
+    </if>
+
     </set>
     where attendance_detail_id = #{attendanceDetailId,jdbcType=VARCHAR}
   </update>
@@ -39,7 +78,45 @@
     update attendance_detail
     set attendance_id = #{attendanceId,jdbcType=VARCHAR},
       attendance_status = #{attendanceStatus,jdbcType=VARCHAR},
-      detail_user_id = #{detailUserId,jdbcType=VARCHAR}
+      detail_user_id = #{detailUserId,jdbcType=VARCHAR},
+      sis_finsh =  #{isFinsh,jdbcType=BIT}
     where attendance_detail_id = #{attendanceDetailId,jdbcType=VARCHAR}
   </update>
+  <insert id="insert" parameterType="attendanceDetail">
+    insert into attendance_detail ( attendance_detail_id, attendance_id, attendance_status, detail_user_id,sis_finsh)
+    values (#{attendanceDetailId,jdbcType=VARCHAR}, #{attendanceId,jdbcType=VARCHAR}, #{attendanceStatus,jdbcType=VARCHAR},
+   #{detailUserId,jdbcType=VARCHAR},#{isFinsh,jdbcType=BIT})
+  </insert>
+
+  <select id="findDetailsByAttendanceId" parameterType="attendanceRecord" resultMap="BaseResultMap">
+    SELECT * FROM attendance_detail WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR}
+
+  </select>
+  <select id="findAllByAttendanceId" parameterType="attendanceRecord"  resultMap="BaseResultMap">
+       SELECT attendance_detail_id,attendance_status,detail_user_id FROM attendance_detail WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR}
+  </select>
+
+  <update id="updateList">
+    UPDATE  attendance_detail
+    SET sis_finsh = TRUE
+    where attendance_detail_id in
+    <foreach collection="list" open="(" close=")" separator="," item="attendanceDetailIds">
+      ${attendanceDetailIds}
+    </foreach>
+  </update>
+<select id="findByAttendanceIdAndUserId" parameterType="attendanceDetail" resultMap="BaseResultMap">
+    SELECT attendance_status FROM  attendance_detail WHERE  attendance_id = #{attendanceId} AND  detail_user_id = #{detailUserId}
+</select>
+
+  <select id="selectList" parameterType="attendanceDetail" resultMap="BaseResultMap">
+      SELECT  ad.attendance_detail_id,ad.attendance_status,u.user_id,u.user_name,u.sjnumber FROM  attendance_detail ad ,USER u WHERE ad.attendance_id=#{attendanceId} AND ad.detail_user_id = u.user_id
+  </select>
+
+  <update id="updateStatus" parameterType="attendanceDetail">
+     UPDATE  attendance_detail SET  attendance_status = #{attendanceStatus} WHERE attendance_detail_id = #{attendanceDetailId}
+  </update>
+
+  <select id="findListByKeyValue" parameterType="map" resultMap="BaseResultMap">
+     SELECT  ad.attendance_detail_id,ad.attendance_status,u.user_id,u.user_name,u.sjnumber FROM  attendance_detail ad ,USER u WHERE ad.attendance_id = #{attendanceId} AND u.user_name like #{searchKeyValue} AND ad.detail_user_id = u.user_id
+  </select>
 </mapper>

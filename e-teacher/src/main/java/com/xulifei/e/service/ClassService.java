@@ -1,6 +1,7 @@
 package com.xulifei.e.service;
 
 import com.xulifei.e.entity.Class;
+import com.xulifei.e.entity.PersonalAttendanceInformationTable;
 
 import java.util.List;
 import java.util.Map;
@@ -22,5 +23,10 @@ public interface ClassService extends BaseService<Class> {
    int useCode(Map<String ,Object> map) throws  Exception;
    List<Class> joinClass(String userId,String code) throws  Exception;
    int joinClass2(String classId,int totalAttendenceNumber,String userId) throws  Exception;
+   int quitClass(PersonalAttendanceInformationTable personalAttendanceInformationTable) throws Exception;
+   int removeClass(Class c);
+   Class findByClassId(String classId);
+   Class findAttendanceNumber(Class c) throws  Exception;
+   int findMemberByClassId(String classId) throws Exception;
 
 }

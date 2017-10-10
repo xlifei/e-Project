@@ -17,5 +17,8 @@ public interface UserMapper extends BaseMapper<User>{
     int findByAccount(User user);
     int insertSelective(User user);
     List<User> findUserByAccount(User user);
-
+    User findTeacherByClassId(String classId);
+    List<User> findStudentByClassId(String classId);
+    List<User> findStudentByClassIdForCloudStatistics(String classId);
+    int updateNumber(User user);
 }

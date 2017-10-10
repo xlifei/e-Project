@@ -9,13 +9,32 @@ public class AttendanceDetail implements Serializable {
 
     private String attendanceId;
 
-    private String attendanceStatus;
+    private String attendanceStatus = "旷到";
 
     private String detailUserId;
 
+    private User user;
+
+    private  boolean isFinsh = false;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public boolean isFinsh() {
+        return isFinsh;
+    }
+
+    public void setFinsh(boolean finsh) {
+        isFinsh = finsh;
+    }
 
     public String getAttendanceDetailId() {
-        if (attendanceDetailId != null) {
+        if (attendanceDetailId == null) {
             attendanceDetailId = UUID.randomUUID().toString().replaceAll("-","");
         }
         return attendanceDetailId;

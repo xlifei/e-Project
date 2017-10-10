@@ -162,7 +162,7 @@
     WHERE  c.user_id =  #{userId,jdbcType=VARCHAR} OR pinfo.user_id =  #{userId,jdbcType=VARCHAR}) cp
       ,invite_code ic,USER u
       WHERE cp.code_id= ic.code_id AND cp.user_id = u.user_id
-       ORDER BY cp.serial_number ASC;
+       ORDER BY cp.serial_number DESC;
   </select>
   <select id="findArchiveClassRoom" parameterType="class" resultMap="BaseResultMap">
 SELECT cp.class_id,cp.class_name,cp.member_number,cp.bgc ,cp.user_id,ic.code FROM (SELECT c.class_id,c.class_name,c.member_number,c.bgc ,c.user_id,c.code_id,c.serial_number FROM class c LEFT OUTER JOIN personal_attendance_information_table pinfo ON c.class_id = pinfo.class_id
@@ -184,7 +184,7 @@ SELECT cp.class_id,cp.class_name,cp.member_number,cp.bgc ,cp.user_id,ic.code FRO
   <update id="updateCurrentSerialNumber" parameterType="java.lang.String" >
 
 UPDATE class
-    SET  serial_number = (SELECT c.serial_number FROM (SELECT serial_number FROM class  WHERE class_id = #{classId,jdbcType=VARCHAR})c)-1
+    SET  serial_number = (SELECT c.serial_number FROM (SELECT serial_number FROM class  WHERE class_id = #{classId,jdbcType=VARCHAR})c)+1
     WHERE class_id = #{classId,jdbcType=VARCHAR}
 
   </update>
@@ -192,7 +192,7 @@ UPDATE class
   <update id="updatePreSerialNumber" parameterType="java.lang.String" >
 
 UPDATE class
-    SET  serial_number = (SELECT c.serial_number FROM (SELECT serial_number FROM class  WHERE class_id = #{classId,jdbcType=VARCHAR})c)+1
+    SET  serial_number = (SELECT c.serial_number FROM (SELECT serial_number FROM class  WHERE class_id = #{classId,jdbcType=VARCHAR})c)-1
     WHERE class_id = #{classId,jdbcType=VARCHAR}
 
   </update>
@@ -212,10 +212,10 @@ UPDATE class
   </update>
 
     <select id="findByCode" parameterType="java.lang.String" resultMap="BaseResultMap">
-     SELECT       ci.class_id,ci.class_name, ci.serial_number, ci.atotal_check_number,
+     SELECT       ci.class_id,ci.total_attendance_id,ci.class_name, ci.serial_number, ci.atotal_check_number,
     ci.member_number, ci.is_archive,ci.bgc,ci.user_id,u.user_name FROM
         (select
-         c.class_id,c.user_id, c.class_name, c.serial_number, c.atotal_check_number,
+         c.class_id,c.total_attendance_id,c.user_id, c.class_name, c.serial_number, c.atotal_check_number,
     c.member_number, c.is_archive,c.bgc
         from class c
         where c.code_id IN (select code_id from invite_code WHERE  code =#{code,jdbcType=VARCHAR})
@@ -227,5 +227,32 @@ UPDATE class cl
     SET  cl.member_number = (SELECT c.member_number FROM (SELECT member_number FROM class  WHERE class_id = #{classId,jdbcType=VARCHAR})c)+1
     WHERE cl.class_id = #{classId,jdbcType=VARCHAR}
 </update>
+    <update id="updateMemberRedByClassId" parameterType="java.lang.String" >
+        UPDATE class cl
+        SET  cl.member_number = (SELECT c.member_number FROM (SELECT member_number FROM class  WHERE class_id = #{classId,jdbcType=VARCHAR})c)-1
+        WHERE cl.class_id = #{classId,jdbcType=VARCHAR}
+    </update>
 
+    <select id="findAttendanceNumber" parameterType="class" resultMap="BaseResultMap">
+        SELECT  c.member_number,ar.rattendance_number FROM  class c,attendance_record ar WHERE c.class_id = #{classId,jdbcType=VARCHAR} AND c.class_id = ar.class_id AND attendance_id = #{attendanceRecordList[0].attendanceId,jdbcType=VARCHAR}
+    </select>
+
+    <select id="selectTotalAttendanceIdByClassId" parameterType="java.lang.String" resultType="java.lang.String">
+        SELECT total_attendance_id FROM  class WHERE  class_id = #{classId}
+    </select>
+
+    <select id="findMemberByClassId" parameterType="java.lang.String" resultType="int">
+        SELECT  member_number FROM  class WHERE  class_id = #{classId};
+    </select>
+
+    <update id="updateAtotalCheckNumberByClassId" parameterType="java.lang.String">
+     UPDATE class cl
+    SET  cl.atotal_check_number = (SELECT c.atotal_check_number FROM (SELECT atotal_check_number FROM class  WHERE class_id = #{classId,jdbcType=VARCHAR})c)-1
+    WHERE cl.class_id = #{classId,jdbcType=VARCHAR}
+    </update>
+    <update id="updateAtotalCheckNumberPlusByClassId" parameterType="java.lang.String">
+        UPDATE class cl
+        SET  cl.atotal_check_number = (SELECT c.atotal_check_number FROM (SELECT atotal_check_number FROM class  WHERE class_id = #{classId,jdbcType=VARCHAR})c)+1
+        WHERE cl.class_id = #{classId,jdbcType=VARCHAR}
+    </update>
 </mapper>

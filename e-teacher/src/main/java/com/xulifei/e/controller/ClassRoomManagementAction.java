@@ -67,8 +67,8 @@ public class ClassRoomManagementAction extends  BaseAction {
     public Object removeClass(Class c) {
         try {
             Map map = new HashMap<String, Object>();
-            int num = classService.delete(c);
-            if (num > 0) {
+            int num = classService.removeClass(c);
+            if (num > 1) {
                 map.put("isDeleteSuccess", true);
                 return map;
             }
@@ -80,11 +80,11 @@ public class ClassRoomManagementAction extends  BaseAction {
     }
     @RequestMapping(value="/quitClass",produces="application/json;charset=UTF-8")
     @ResponseBody
-    public Object removeClass(PersonalAttendanceInformationTable pinfo) {
+    public Object quitClass(PersonalAttendanceInformationTable pinfo) {
         try {
             Map map = new HashMap<String, Object>();
-            int num = pinfoService.delete(pinfo);
-            if (num > 0) {
+            int num = classService.quitClass(pinfo);
+            if (num > 1) {
                 map.put("isQuitSuccess", true);
                 return map;
             }
@@ -275,6 +275,49 @@ public class ClassRoomManagementAction extends  BaseAction {
 
     }
 
+    @RequestMapping(value="/findByClassId",produces="application/json;charset=UTF-8")
+    @ResponseBody
+    public Object findByClassId(String classId) {
+        try {
+            Map<String,Object> map = new HashMap<String, Object>();
+            Class c = classService.findByClassId(classId);
+            map.put("class",c);
+            return map;
+        } catch (Exception e) {
+            throw  new RuntimeException(e);
+        }
 
 
+    }
+
+    @RequestMapping(value="/findAttendanceNumber",produces="application/json;charset=UTF-8")
+    @ResponseBody
+    public Object findAttendanceNumber(Class c) {
+        try {
+            Map<String,Object> map = new HashMap<String, Object>();
+            Class cla = classService.findAttendanceNumber(c);
+            map.put("class",cla);
+
+            return map;
+        } catch (Exception e) {
+            throw  new RuntimeException(e);
+        }
+
+    }
+
+
+    @RequestMapping(value="/findMemberByClassId",produces="application/json;charset=UTF-8")
+    @ResponseBody
+    public Object findMemberByClassId(String classId) {
+        try {
+            Map<String,Object> map = new HashMap<String, Object>();
+           int memberNumber = classService.findMemberByClassId(classId);
+            map.put("memberNumber",memberNumber);
+
+            return map;
+        } catch (Exception e) {
+            throw  new RuntimeException(e);
+        }
+
+    }
 }

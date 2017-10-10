@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.annotation.PostConstruct;
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
+import java.util.List;
 
 /**
  * Created by john on 2017/7/28.
@@ -85,9 +86,9 @@ public class BaseServiceImpl<T> implements BaseService<T> {
     }
 
     @Override
-    public int deleteList(String[] pks) throws Exception {
+    public int deleteList(List<T> ids) throws Exception {
         // TODO Auto-generated method stub
-        return baseMapper.deleteList(pks);
+        return baseMapper.deleteList(ids);
     }
 
     @Override

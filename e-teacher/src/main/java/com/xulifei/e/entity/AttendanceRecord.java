@@ -1,7 +1,10 @@
 package com.xulifei.e.entity;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 public class AttendanceRecord implements Serializable{
@@ -13,22 +16,64 @@ public class AttendanceRecord implements Serializable{
 
     private String attendanceName;
 
-    private Date creationTime;
+    private Date creationTime ;
 
-    private Integer rattendanceNumber;
+    private Integer rattendanceNumber = 0;
 
-    private Integer rlateNumber;
+    private Integer rlateNumber = 0;
 
-    private Integer rkuangNumber;
+    private Integer rkuangNumber = 0;
 
-    private Integer rleaveNumber;
+    private Integer rleaveNumber = 0;
 
-    private String attendanceCode;
+    private String attendanceCode ;
 
-    private Boolean isOpen;
+    private List<AttendanceDetail> attendanceDetailList = new ArrayList<AttendanceDetail>();
+
+    private Boolean isOpen = false;
+
+    private Boolean isFinsh = false;
+
+    private BigDecimal longitude;
+
+    private  BigDecimal latitude;
+
+
+
+    public BigDecimal getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(BigDecimal longitude) {
+        this.longitude = longitude;
+    }
+
+    public BigDecimal getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(BigDecimal latitude) {
+        this.latitude = latitude;
+    }
+
+    public List<AttendanceDetail> getAttendanceDetailList() {
+        return attendanceDetailList;
+    }
+
+    public void setAttendanceDetailList(List<AttendanceDetail> attendanceDetailList) {
+        this.attendanceDetailList = attendanceDetailList;
+    }
+
+    public Boolean getIsFinsh() {
+        return isFinsh;
+    }
+
+    public void setIsFinsh(Boolean isFinsh) {
+        this.isFinsh = isFinsh;
+    }
 
     public String getAttendanceId() {
-        if (attendanceId != null) {
+        if (attendanceId == null) {
             attendanceId = UUID.randomUUID().toString().replaceAll("-","");
         }
         return attendanceId;

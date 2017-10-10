@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC
+"-//mybatis.org//DTD MyBatis Generator Configuration 
+1.0//EN"
+"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"
+>
+<generatorConfiguration>
+	<!--导入属性配置-->
+	<properties resource="generator.properties"></properties>
+
+	<!-- 制定mysql的驱动包的路径 千万别放中文路径下 -->
+	<!--驱动包在pom的逆向工程插件中已经配置了，就不用配了-->
+	<!--<classPathEntry location="D:\allprojectjar\mysql-connector-java-5.1.7\mysql-connector-java-5.1.7-bin.jar"/>-->
+
+	<context id="default" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<!-- 是否取消注释 -->
+			<property name="suppressAllComments" value="true" />
+
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+
+		<!-- 配置数据源和生成的代码所存放的位置 -->
+		<!-- 处理2  jdbc 连接信息 -->
+		<jdbcConnection driverClass="${jdbc.driverClass}"
+						connectionURL="${jdbc.connectionURL}" userId="${jdbc.userId}" password="${jdbc.password}">
+		</jdbcConnection>
+
+		<javaModelGenerator targetPackage="com.xulifei.e.entity"
+							targetProject="src/main/java">
+			<!-- 去除字段前后空格 -->
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<!--Mapper映射文件生成所在的目录 为每一个数据库的表生成对应的SqlMap文件 -->
+		<sqlMapGenerator targetPackage="com.xulifei.e.dao"
+						 targetProject="src/main/java">
+			<property name="enableSubPackages" value="false"/>
+		</sqlMapGenerator>
+
+
+		<!-- 客户端代码，生成易于使用的针对Model对象和XML配置文件 的代码
+             type="ANNOTATEDMAPPER",生成Java Model 和基于注解的Mapper对象
+             type="MIXEDMAPPER",生成基于注解的Java Model 和相应的Mapper对象
+             type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口(dao接口)
+     -->
+		<javaClientGenerator targetPackage="com.xulifei.e.dao"
+							 targetProject="src/main/java" type="XMLMAPPER">
+			<property name="enableSubPackages" value="true"/>
+		</javaClientGenerator>
+
+
+		<!--指定表及实体类的映射-->
+		<table tableName="user"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   selectByExampleQueryId="false"
+			   enableInsert="false" />
+
+		<table tableName="total_attendance_infomation"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   selectByExampleQueryId="false"
+			   enableInsert="false" />
+		<table tableName="invite_code"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   selectByExampleQueryId="false"
+			   enableInsert="false" />
+		<table tableName="class"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   selectByExampleQueryId="false"
+			   enableInsert="false" />
+		<table tableName="personal_attendance_information_table"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   selectByExampleQueryId="false"
+			   enableInsert="false" />
+		<table tableName="attendance_record"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   selectByExampleQueryId="false"
+			   enableInsert="false" />
+		<table tableName="attendance_detail"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   selectByExampleQueryId="false"
+			   enableInsert="false" />
+
+		<!--&lt;!&ndash;指定表及实体类的映射&ndash;&gt;-->
+		<!--<table tableName="account" domainObjectName="Account"-->
+			   <!--enableSelectByExample="true" enableDeleteByExample="true"-->
+			   <!--enableCountByExample="true" enableUpdateByExample="true"-->
+			   <!--enableInsert="true" />-->
+
+		<!--<table tableName="supplier" domainObjectName="Supplier"-->
+			   <!--enableSelectByExample="true" enableDeleteByExample="true"-->
+			   <!--enableCountByExample="true" enableUpdateByExample="true"-->
+			   <!--enableInsert="true" />-->
+
+	<!--
+	 	 为哪些表生成代码 tableName:表名 schema:不用填写
+	 	<table schema="" tableName="attencode" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false"
+		>
+		</table>
+		<table schema="" tableName="classinfo" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false"
+		>
+		</table>
+		
+		<table schema="" tableName="course" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false"
+		>
+		</table>
+		<table schema="" tableName="course_schedule" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false"
+		>
+		</table>
+		<table schema="" tableName="course_student" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false"
+		>
+		</table>
+		
+		<table schema="" tableName="studenttostudent" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false"
+		>
+		</table>
+			
+		<table schema="" tableName="teacher" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false"
+		>
+		</table>
+			
+		<table schema="" tableName="teachertostudent" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false"
+		>
+		</table> -->
+	
+	</context>
+</generatorConfiguration>

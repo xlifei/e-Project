@@ -19,9 +19,9 @@ public class User implements Serializable {
 
     private String department;
 
-    private String major;
+    private String major ;
 
-    private String sjnumber;
+    private String sjnumber = "              ";
 
     private String educationBackground;
 
@@ -29,6 +29,15 @@ public class User implements Serializable {
 
     private String researchDirection;
 
+    private PersonalAttendanceInformationTable p;
+
+    public PersonalAttendanceInformationTable getP() {
+        return p;
+    }
+
+    public void setP(PersonalAttendanceInformationTable p) {
+        this.p = p;
+    }
 
     public String getUserId() {
         if (userId == null) {

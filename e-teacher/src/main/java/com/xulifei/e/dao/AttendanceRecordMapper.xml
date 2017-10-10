@@ -12,10 +12,15 @@
     <result column="rleave_number" jdbcType="INTEGER" property="rleaveNumber" />
     <result column="attendance_code" jdbcType="VARCHAR" property="attendanceCode" />
     <result column="is_open" jdbcType="BIT" property="isOpen" />
+    <result column="is_finsh" jdbcType="BIT" property="isFinsh" />
+    <result column="longitude" jdbcType="DECIMAL" property="longitude" />
+    <result column="latitude" jdbcType="DECIMAL" property="latitude" />
+    <!--<association property="classRoom" resultMap="com.xulifei.e.dao.ClassMapper.BaseResultMap"></association>-->
+    <collection property="attendanceDetailList" resultMap="com.xulifei.e.dao.AttendanceDetailMapper.BaseResultMap" ></collection>
   </resultMap>
   <sql id="Base_Column_List">
     attendance_id, class_id, attendance_name, creation_time, rattendance_number, rlate_number, 
-    rkuang_number, rleave_number, attendance_code, is_open
+    rkuang_number, rleave_number, attendance_code, is_open,is_finsh,longitude,latitude
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
@@ -23,11 +28,29 @@
     from attendance_record
     where attendance_id = #{attendanceId,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+  <delete id="delete" parameterType="attendanceRecord">
     delete from attendance_record
     where attendance_id = #{attendanceId,jdbcType=VARCHAR}
   </delete>
-  <update id="updateByPrimaryKeySelective" parameterType="com.xulifei.e.entity.AttendanceRecord">
+  <delete id="deleteList">
+    delete from attendance_record
+    where attendance_id IN
+    <foreach collection="list" open="(" close=")" separator="," item="ids">
+      #{ids}
+    </foreach>
+
+  </delete>
+
+  <delete id="deleteListByArgString">
+    delete from attendance_record
+    where attendance_id IN
+    <foreach collection="list" open="(" close=")" separator="," item="ids">
+      #{ids}
+    </foreach>
+
+  </delete>
+
+  <update id="update" parameterType="com.xulifei.e.entity.AttendanceRecord">
     update attendance_record
     <set>
       <if test="classId != null">
@@ -57,6 +80,15 @@
       <if test="isOpen != null">
         is_open = #{isOpen,jdbcType=BIT},
       </if>
+      <if test="isFinsh != null">
+        is_finsh = #{isFinsh,jdbcType=BIT},
+      </if>
+      <if test="longitude != null">
+        longitude = #{longitude,jdbcType=DECIMAL},
+      </if>
+      <if test="latitude != null">
+        latitude = #{latitude,jdbcType=DECIMAL},
+      </if>
     </set>
     where attendance_id = #{attendanceId,jdbcType=VARCHAR}
   </update>
@@ -70,7 +102,131 @@
       rkuang_number = #{rkuangNumber,jdbcType=INTEGER},
       rleave_number = #{rleaveNumber,jdbcType=INTEGER},
       attendance_code = #{attendanceCode,jdbcType=VARCHAR},
-      is_open = #{isOpen,jdbcType=BIT}
+      is_open = #{isOpen,jdbcType=BIT},
+      is_finsh = #{isFinsh,jdbcType=BIT},
+        longitude = #{longitude,jdbcType=DECIMAL},
+       latitude = #{latitude,jdbcType=DECIMAL}
     where attendance_id = #{attendanceId,jdbcType=VARCHAR}
   </update>
+  <insert id="insert" parameterType="com.xulifei.e.entity.AttendanceRecord">
+  INSERT  INTO attendance_record (attendance_id, class_id, attendance_name, creation_time, rattendance_number, rlate_number,
+    rkuang_number, rleave_number, attendance_code, is_open,is_finsh,longitude,latitude)
+    values ( #{attendanceId,jdbcType=VARCHAR}, #{classId,jdbcType=VARCHAR},#{attendanceName,jdbcType=VARCHAR},
+   #{creationTime,jdbcType=TIMESTAMP},#{rattendanceNumber,jdbcType=INTEGER}, #{rlateNumber,jdbcType=INTEGER},
+   #{rkuangNumber,jdbcType=INTEGER},#{rleaveNumber,jdbcType=INTEGER},#{attendanceCode,jdbcType=VARCHAR}, #{isOpen,jdbcType=BIT},#{isFinsh,jdbcType=BIT},#{longitude,jdbcType=DECIMAL},#{latitude,jdbcType=DECIMAL})
+  </insert>
+<select id="findAllRecordForStudent" parameterType="attendanceRecord" resultMap="BaseResultMap">
+SELECT * FROM
+  (SELECT ar.attendance_id, ar.class_id, ar.attendance_name, ar.creation_time, ar.rattendance_number, ar.rlate_number,
+    ar.rkuang_number, ar.rleave_number, ar.attendance_code, ar.is_open,ar.is_finsh,ar.longitude,ar.latitude,ad.attendance_detail_id,ad.attendance_status,ad.detail_user_id,ad.sis_finsh FROM attendance_record ar,attendance_detail ad WHERE  ar.class_id = #{classId} AND ar.attendance_id = ad.attendance_id)aa
+  WHERE aa.detail_user_id = #{attendanceDetailList[0].detailUserId}
+  ORDER BY aa.creation_time DESC
+  </select>
+<select id="findAllRecordForStudentFinshFalse" parameterType="attendanceRecord" resultMap="BaseResultMap">
+  SELECT * FROM
+  (SELECT ar.attendance_id, ar.class_id, ar.attendance_name, ar.creation_time, ar.rattendance_number, ar.rlate_number,
+    ar.rkuang_number, ar.rleave_number, ar.attendance_code, ar.is_open,ar.is_finsh,ar.longitude,ar.latitude,ad.attendance_detail_id,ad.attendance_status,ad.detail_user_id,ad.sis_finsh FROM attendance_record ar,attendance_detail ad WHERE  ar.class_id = #{classId} AND ar.attendance_id = ad.attendance_id)aa
+  WHERE aa.detail_user_id = #{attendanceDetailList[0].detailUserId} AND  aa.is_finsh = false AND aa.sis_finsh = false
+  ORDER BY aa.creation_time DESC
+</select>
+  <select id="findAllRecordForTeacher" parameterType="attendanceRecord" resultMap="BaseResultMap">
+SELECT
+   attendance_id, class_id, attendance_name, creation_time, rattendance_number, rlate_number,
+    rkuang_number, rleave_number, attendance_code, is_open,is_finsh
+      FROM attendance_record  WHERE  class_id = #{classId} ORDER  BY creation_time DESC
+  </select>
+
+  <select id="findAllRecordForTeacherFinshFalse" parameterType="attendanceRecord" resultMap="BaseResultMap">
+    SELECT
+     attendance_id, class_id, attendance_name, creation_time, rattendance_number, rlate_number,
+    rkuang_number, rleave_number, attendance_code, is_open,is_finsh
+      FROM attendance_record  WHERE  class_id = #{classId} AND is_finsh = false ORDER  BY creation_time DESC
+
+  </select>
+
+  <select id="findAllRecordByClassId" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT  attendance_id,rattendance_number,rlate_number,rkuang_number,rleave_number,is_finsh  FROM  attendance_record WHERE class_id = #{classId}
+  </select>
+
+  <select id="findAllRecordByClassIdAndUserId" parameterType="com.xulifei.e.entity.PersonalAttendanceInformationTable" resultMap="BaseResultMap">
+
+      SELECT  ar.attendance_id,ar.rattendance_number,ar.rlate_number,ar.rkuang_number,ar.rleave_number,ar.is_finsh,ad.attendance_status,ad.attendance_detail_id  FROM  attendance_record ar,attendance_detail ad WHERE ar.class_id = #{classId} AND ad.detail_user_id = #{userId} AND
+      ar.attendance_id = ad.attendance_id
+  </select>
+
+  <update id="updateRattendanceNumber" parameterType="attendanceRecord">
+    UPDATE attendance_record
+    SET  rattendance_number = (SELECT a.rattendance_number FROM (SELECT rattendance_number FROM attendance_record  WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR})a)+1
+    WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateRattendanceAndRleaveNumber" parameterType="attendanceRecord">
+    UPDATE attendance_record
+    SET  rattendance_number = (SELECT a.rattendance_number FROM (SELECT rattendance_number FROM attendance_record  WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR})a)+1,
+ rleave_number = (SELECT a.rleave_number FROM (SELECT rleave_number FROM attendance_record  WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR})a)-1
+
+    WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateRlateAndRkuangNumber" parameterType="attendanceRecord">
+    UPDATE attendance_record
+    SET  rlate_number = (SELECT a.rlate_number FROM (SELECT rlate_number FROM attendance_record  WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR})a)+1
+    , rkuang_number = (SELECT a.rkuang_number FROM (SELECT rkuang_number FROM attendance_record  WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR})a)-1
+
+    WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateRkuangAndRattendanceNumber" parameterType="attendanceRecord">
+    UPDATE attendance_record
+    SET  rkuang_number = (SELECT a.rkuang_number FROM (SELECT rkuang_number FROM attendance_record  WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR})a)+1
+   ,   rattendance_number = (SELECT a.rattendance_number FROM (SELECT rattendance_number FROM attendance_record  WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR})a)-1
+
+    WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateRleaveAndRlateNumber" parameterType="attendanceRecord">
+    UPDATE attendance_record
+    SET  rleave_number = (SELECT a.rleave_number FROM (SELECT rleave_number FROM attendance_record  WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR})a)+1
+    , rlate_number = (SELECT a.rlate_number FROM (SELECT rlate_number FROM attendance_record  WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR})a)-1
+
+    WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR}
+  </update>
+
+
+
+
+
+
+  <update id="updateIsFinshByAttendance" parameterType="java.lang.String">
+    UPDATE attendance_record
+    SET  is_finsh = TRUE
+    WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateKuangByAttendance" parameterType="attendanceRecord">
+    UPDATE attendance_record
+    SET  rkuang_number =  #{rkuangNumber,jdbcType=INTEGER}
+    WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateRattendanceByAttendance" parameterType="attendanceRecord">
+    UPDATE attendance_record
+    SET  rattendance_number =  #{rattendanceNumber,jdbcType=INTEGER}
+    WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateRlateByAttendance" parameterType="attendanceRecord">
+    UPDATE attendance_record
+    SET  rlate_number =  #{rlateNumber,jdbcType=INTEGER}
+    WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateRleaveByAttendance" parameterType="attendanceRecord">
+    UPDATE attendance_record
+    SET  rleave_number =  #{rleaveNumber,jdbcType=INTEGER}
+    WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateAttendanceName" parameterType="attendanceRecord">
+    UPDATE attendance_record
+    SET  attendance_name =  #{attendanceName,jdbcType=INTEGER}
+    WHERE attendance_id = #{attendanceId,jdbcType=VARCHAR}
+  </update>
+
 </mapper>

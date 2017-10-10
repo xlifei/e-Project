@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xulifei.e.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.xulifei.e.entity.User">
+    <id column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="account" jdbcType="VARCHAR" property="account" />
+    <result column="pwd" jdbcType="VARCHAR" property="pwd" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="school" jdbcType="VARCHAR" property="school" />
+    <result column="department" jdbcType="VARCHAR" property="department" />
+    <result column="major" jdbcType="VARCHAR" property="major" />
+    <result column="sjnumber" jdbcType="VARCHAR" property="sjnumber" />
+    <result column="education_background" jdbcType="VARCHAR" property="educationBackground" />
+    <result column="professional_title" jdbcType="VARCHAR" property="professionalTitle" />
+    <result column="research_direction" jdbcType="VARCHAR" property="researchDirection" />
+    <association property="p" resultMap="com.xulifei.e.dao.PersonalAttendanceInformationTableMapper.BaseResultMap"></association>
+  </resultMap>
+  <sql id="Base_Column_List">
+    user_id, account, pwd, user_name, sex, school, department, major, sjnumber, education_background, 
+    professional_title, research_direction
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from user
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </delete>
+  <update id="update" parameterType="com.xulifei.e.entity.User">
+    update user
+    <set>
+      <if test="account != null">
+        account = #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="pwd != null">
+        pwd = #{pwd,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="school != null">
+        school = #{school,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null">
+        department = #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="major != null">
+        major = #{major,jdbcType=VARCHAR},
+      </if>
+
+      <if test="educationBackground != null">
+        education_background = #{educationBackground,jdbcType=VARCHAR},
+      </if>
+      <if test="professionalTitle != null">
+        professional_title = #{professionalTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="researchDirection != null">
+        research_direction = #{researchDirection,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateNumber" parameterType="com.xulifei.e.entity.User">
+    update user
+   SET sjnumber = #{sjnumber}
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xulifei.e.entity.User">
+    update user
+    set account = #{account,jdbcType=VARCHAR},
+      pwd = #{pwd,jdbcType=VARCHAR},
+      user_name = #{userName,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      school = #{school,jdbcType=VARCHAR},
+      department = #{department,jdbcType=VARCHAR},
+      major = #{major,jdbcType=VARCHAR},
+      sjnumber = #{sjnumber,jdbcType=VARCHAR},
+      education_background = #{educationBackground,jdbcType=VARCHAR},
+      professional_title = #{professionalTitle,jdbcType=VARCHAR},
+      research_direction = #{researchDirection,jdbcType=VARCHAR}
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+  <insert id="insert" parameterType="user" >
+
+    insert into user (user_id, account, pwd,
+     user_name, sex, school,department,major,sjnumber,education_background,professional_title,research_direction)
+    values (#{userId,jdbcType=VARCHAR}, #{account,jdbcType=VARCHAR}, #{pwd,jdbcType=VARCHAR},
+    #{userName,jdbcType=VARCHAR},#{sex,jdbcType=VARCHAR}, #{school,jdbcType=VARCHAR},
+    #{department,jdbcType=VARCHAR},#{major,jdbcType=VARCHAR},#{sjnumber,jdbcType=VARCHAR},
+    #{educationBackground,jdbcType=VARCHAR},#{professionalTitle,jdbcType=VARCHAR},
+    #{researchDirection,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="user" >
+
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="account != null" >
+        account,
+      </if>
+      <if test="pwd != null" >
+        pwd,
+      </if>
+      <if test="userName != null" >
+        user_name,
+      </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="school != null" >
+        school,
+      </if>
+      <if test="department != null" >
+        department,
+      </if>
+      <if test="major != null" >
+        major,
+      </if>
+      <if test="sjnumber != null" >
+        sjnumber,
+      </if>
+
+      <if test="educationBackground != null" >
+        education_background,
+      </if>
+      <if test="professionalTitle != null" >
+        professional_title,
+      </if>
+      <if test="researchDirection != null" >
+        research_direction,
+      </if>
+
+    </trim>
+
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="account != null" >
+        #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="pwd != null" >
+        #{pwd,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null" >
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="school != null" >
+        #{school,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null" >
+        #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="major != null" >
+        #{major,jdbcType=VARCHAR},
+      </if>
+      <if test="sjnumber != null" >
+        #{sjnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="educationBackground != null" >
+        #{educationBackground,jdbcType=VARCHAR},
+      </if>
+      <if test="professionalTitle != null" >
+        #{professionalTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="researchDirection != null" >
+        #{researchDirection,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+
+
+
+
+
+  <!-- 用户登陆 -->
+  <select id="findUserByAccountAndPwd" parameterType="user" resultMap="BaseResultMap">
+  	select * from USER where account =#{account} and pwd =#{pwd}
+  </select>
+  <select id="findUserByAccount" parameterType="user" resultMap="BaseResultMap">
+    select * from USER where account =#{account}
+  </select>
+  <update id="updatePwdByAccount"  parameterType="com.xulifei.e.entity.User">
+    update user
+    set
+    pwd = #{pwd,jdbcType=VARCHAR}
+    where  account = #{account,jdbcType=VARCHAR}
+  </update>
+
+  <select id="findTeacherByClassId" parameterType="java.lang.String" resultMap="BaseResultMap">
+
+SELECT
+    u.user_id, u.account, u.pwd, u.user_name, u.sex, u.school, u.department, u.major, u.sjnumber, u.education_background,
+    u.professional_title, u.research_direction
+ FROM class c,USER u
+WHERE c.class_id = #{classId} AND c.user_id = u.user_id
+  </select>
+
+  <select id="findStudentByClassId" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT
+    u.user_id, u.account, u.pwd, u.user_name, u.sex, u.school, u.department, u.major, u.sjnumber, u.education_background,
+    u.professional_title, u.research_direction
+      FROM
+(SELECT pinfo.user_id FROM class c,personal_attendance_information_table pinfo
+WHERE c.class_id = #{classId} AND c.class_id = pinfo.class_id )  pcinfo,USER u
+WHERE pcinfo.user_id = u.user_id
+
+  </select>
+
+  <select id="findStudentByClassIdForCloudStatistics" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT
+    u.user_id, u.account, u.user_name, u.sjnumber,pcinfo.total_number_attendance,
+     pcinfo.attendance_number,  pcinfo.late_number,
+    pcinfo.kuang_number, pcinfo.leave_number
+    FROM
+    (SELECT   pinfo.user_id, pinfo.total_number_attendance, pinfo.attendance_number,  pinfo.late_number,
+    pinfo.kuang_number, pinfo.leave_number FROM class c,personal_attendance_information_table pinfo
+    WHERE c.class_id = #{classId} AND c.class_id = pinfo.class_id )  pcinfo,USER u
+    WHERE pcinfo.user_id = u.user_id
+
+  </select>
+</mapper>

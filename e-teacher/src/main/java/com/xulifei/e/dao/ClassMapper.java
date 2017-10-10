@@ -21,4 +21,12 @@ public interface ClassMapper extends  BaseMapper<Class> {
     int updateIsArchive(Class c);
    List<Class> findByCode(String code);
      int updateMemberByClassId(String classId);
+    Class findAttendanceNumber(Class c);
+    String selectTotalAttendanceIdByClassId(String classId);
+    int findMemberByClassId(String classId);
+     int updateMemberRedByClassId(String classId);
+    int updateAtotalCheckNumberByClassId(String classId);
+    int updateAtotalCheckNumberPlusByClassId(String classId);
+
+
 }

@@ -5,13 +5,12 @@
     <id column="total_attendance_id" jdbcType="VARCHAR" property="totalAttendanceId" />
     <result column="atotal_check_number" jdbcType="INTEGER" property="atotalCheckNumber" />
     <result column="total_attendance_number" jdbcType="INTEGER" property="totalAttendanceNumber" />
-    <result column="total_absenteeism" jdbcType="INTEGER" property="totalAbsenteeism" />
     <result column="total_late_number" jdbcType="INTEGER" property="totalLateNumber" />
     <result column="total_kuang_number" jdbcType="INTEGER" property="totalKuangNumber" />
     <result column="total_leave_number" jdbcType="INTEGER" property="totalLeaveNumber" />
   </resultMap>
   <sql id="Base_Column_List">
-    total_attendance_id, atotal_check_number, total_attendance_number, total_absenteeism, 
+    total_attendance_id, atotal_check_number, total_attendance_number,
     total_late_number, total_kuang_number, total_leave_number
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
@@ -20,11 +19,16 @@
     from total_attendance_infomation
     where total_attendance_id = #{totalAttendanceId,jdbcType=VARCHAR}
   </select>
+  <select id="selectList" resultMap="BaseResultMap">
+    select
+   total_attendance_id,atotal_check_number,total_attendance_number,total_kuang_number
+    from total_attendance_infomation
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from total_attendance_infomation
     where total_attendance_id = #{totalAttendanceId,jdbcType=VARCHAR}
   </delete>
-  <update id="updateByPrimaryKeySelective" parameterType="com.xulifei.e.entity.TotalAttendanceInfomation">
+  <update id="update" parameterType="com.xulifei.e.entity.TotalAttendanceInfomation">
     update total_attendance_infomation
     <set>
       <if test="atotalCheckNumber != null">
@@ -33,9 +37,7 @@
       <if test="totalAttendanceNumber != null">
         total_attendance_number = #{totalAttendanceNumber,jdbcType=INTEGER},
       </if>
-      <if test="totalAbsenteeism != null">
-        total_absenteeism = #{totalAbsenteeism,jdbcType=INTEGER},
-      </if>
+
       <if test="totalLateNumber != null">
         total_late_number = #{totalLateNumber,jdbcType=INTEGER},
       </if>
@@ -52,10 +54,69 @@
     update total_attendance_infomation
     set atotal_check_number = #{atotalCheckNumber,jdbcType=INTEGER},
       total_attendance_number = #{totalAttendanceNumber,jdbcType=INTEGER},
-      total_absenteeism = #{totalAbsenteeism,jdbcType=INTEGER},
       total_late_number = #{totalLateNumber,jdbcType=INTEGER},
       total_kuang_number = #{totalKuangNumber,jdbcType=INTEGER},
       total_leave_number = #{totalLeaveNumber,jdbcType=INTEGER}
     where total_attendance_id = #{totalAttendanceId,jdbcType=VARCHAR}
   </update>
+
+
+  <select id="selectKuangNumberById" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT total_attendance_id,total_kuang_number FROM total_attendance_infomation
+    WHERE total_attendance_id = #{totalAttendanceId,jdbcType=VARCHAR}
+  </select>
+  <insert id="insert" parameterType="com.xulifei.e.entity.TotalAttendanceInfomation">
+     insert into total_attendance_infomation ( total_attendance_id, atotal_check_number, total_attendance_number,
+    total_late_number, total_kuang_number, total_leave_number)
+    values (#{totalAttendanceId,jdbcType=VARCHAR}, #{atotalCheckNumber,jdbcType=INTEGER}, #{totalAttendanceNumber,jdbcType=INTEGER},
+  #{totalLateNumber,jdbcType=INTEGER}, #{totalKuangNumber,jdbcType=INTEGER},
+#{totalLeaveNumber,jdbcType=INTEGER})
+  </insert>
+  <select id="selectTotalAttendanceByClassId" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT  total_attendance_id,atotal_check_number, total_attendance_number,
+    total_late_number, total_kuang_number, total_leave_number FROM  total_attendance_infomation  WHERE  total_attendance_id
+    IN (SELECT  total_attendance_id FROM class WHERE  class_id=#{classId})
+     </select>
+
+  <update id="updateTotalAttendanceAndLeaveNumber" parameterType="java.lang.String">
+    UPDATE total_attendance_infomation
+    SET  total_attendance_number = (SELECT t.total_attendance_number FROM (SELECT total_attendance_number FROM total_attendance_infomation  WHERE total_attendance_id = #{id})t)+1,
+    total_leave_number = (SELECT t.total_leave_number FROM (SELECT total_leave_number FROM total_attendance_infomation  WHERE total_attendance_id = #{id})t)-1
+
+    WHERE total_attendance_id = #{id}
+  </update>
+
+  <update id="updateTotalLateAndKuangNumber" parameterType="java.lang.String">
+    UPDATE total_attendance_infomation
+    SET  total_late_number = (SELECT t.total_late_number FROM (SELECT total_late_number FROM total_attendance_infomation  WHERE total_attendance_id = #{id})t)+1,
+    total_kuang_number = (SELECT t.total_kuang_number FROM (SELECT total_kuang_number FROM total_attendance_infomation  WHERE total_attendance_id = #{id})t)-1
+
+    WHERE total_attendance_id = #{id}
+  </update>
+  <update id="updateTotalKuangAndAttendanceNumber" parameterType="java.lang.String">
+    UPDATE total_attendance_infomation
+    SET  total_kuang_number = (SELECT t.total_kuang_number FROM (SELECT total_kuang_number FROM total_attendance_infomation  WHERE total_attendance_id = #{id})t)+1,
+    total_attendance_number = (SELECT t.total_attendance_number FROM (SELECT total_attendance_number FROM total_attendance_infomation  WHERE total_attendance_id = #{id})t)-1
+
+    WHERE total_attendance_id = #{id}
+  </update>
+  <update id="updateTotalLeaveAndLateNumber" parameterType="java.lang.String">
+    UPDATE total_attendance_infomation
+    SET  total_leave_number = (SELECT t.total_leave_number FROM (SELECT total_leave_number FROM total_attendance_infomation  WHERE total_attendance_id = #{id})t)+1,
+    total_late_number = (SELECT t.total_late_number FROM (SELECT total_late_number FROM total_attendance_infomation  WHERE total_attendance_id = #{id})t)-1
+
+    WHERE total_attendance_id = #{id}
+  </update>
+
+  <delete id="deleteByClassId" parameterType="java.lang.String">
+       delete from total_attendance_infomation
+    where total_attendance_id IN (SELECT total_attendance_id FROM  class WHERE class_id = #{classId})
+  </delete>
+
+  <select id="findByClassId" parameterType="java.lang.String" resultMap="BaseResultMap">
+     SELECT  *  FROM  total_attendance_infomation  WHERE  total_attendance_id IN
+     (SELECT  total_attendance_id FROM  class WHERE  class_id = #{classId})
+  </select>
+
+
 </mapper>

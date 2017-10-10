@@ -120,4 +120,24 @@ try {
 
 
     }
+    @RequestMapping(value="/changePhonenumber",produces="application/json;charset=UTF-8")
+    @ResponseBody
+    public Object changePhonenumber(User user) {
+        try {
+            Map map = new HashMap<String,Object>();
+            int num = accountService.update(user);
+
+          if (num>0){
+              map.put("updateSuccess",true);
+           return map;
+          }
+         map.put("updateSuccess",false);
+
+            return map;
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
+
+
+    }
 }

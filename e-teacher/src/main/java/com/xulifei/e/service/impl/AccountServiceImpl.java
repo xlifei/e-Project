@@ -4,6 +4,7 @@ import com.xulifei.e.entity.User;
 import com.xulifei.e.service.AccountService;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -36,8 +37,9 @@ public class AccountServiceImpl extends BaseServiceImpl<User> implements Account
 
     @Override
     public boolean registerAccountIsExist(User user) {
-        int num = userMapper.findByAccount(user);
-         if (num>0){
+        List<User> userList = new ArrayList<User>();
+         userList = userMapper.findUserByAccount(user);
+         if (userList.size() > 0){
              return true;
          }
         return false;

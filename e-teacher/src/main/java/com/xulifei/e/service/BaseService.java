@@ -2,6 +2,8 @@ package com.xulifei.e.service;
 
 import com.xulifei.e.entity.Page;
 
+import java.util.List;
+
 /**
  * Created by john on 2017/7/28.
  */
@@ -16,7 +18,7 @@ public interface BaseService<T> {
     public int delete(T entity) throws Exception;
 
     //通过主键（数组）批量删除数据
-    public int deleteList(String [] pks) throws Exception;
+    public int deleteList(List<T> ids) throws Exception;
 
 
     //查询单个对象
