@@ -99,9 +99,9 @@
   <update id="updateList">
     UPDATE  attendance_detail
     SET sis_finsh = TRUE
-    where attendance_detail_id in
-    <foreach collection="list" open="(" close=")" separator="," item="attendanceDetailIds">
-      ${attendanceDetailIds}
+    WHERE attendance_detail_id IN
+    <foreach collection="list"  open="("  close=")"  separator=","  item="attendanceDetailIds">
+      #{attendanceDetailIds}
     </foreach>
   </update>
 <select id="findByAttendanceIdAndUserId" parameterType="attendanceDetail" resultMap="BaseResultMap">

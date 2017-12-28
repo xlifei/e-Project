@@ -9,7 +9,7 @@ public class AttendanceDetail implements Serializable {
 
     private String attendanceId;
 
-    private String attendanceStatus = "旷到";
+    private String attendanceStatus = "旷课";
 
     private String detailUserId;
 

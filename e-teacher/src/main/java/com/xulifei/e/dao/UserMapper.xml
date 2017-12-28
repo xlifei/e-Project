@@ -14,11 +14,12 @@
     <result column="education_background" jdbcType="VARCHAR" property="educationBackground" />
     <result column="professional_title" jdbcType="VARCHAR" property="professionalTitle" />
     <result column="research_direction" jdbcType="VARCHAR" property="researchDirection" />
+    <result column="img_path" jdbcType="VARCHAR" property="imgPath"/>
     <association property="p" resultMap="com.xulifei.e.dao.PersonalAttendanceInformationTableMapper.BaseResultMap"></association>
   </resultMap>
   <sql id="Base_Column_List">
     user_id, account, pwd, user_name, sex, school, department, major, sjnumber, education_background, 
-    professional_title, research_direction
+    professional_title, research_direction,img_path
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
@@ -64,6 +65,9 @@
       <if test="researchDirection != null">
         research_direction = #{researchDirection,jdbcType=VARCHAR},
       </if>
+      <if test="imgPath != null">
+        img_path = #{imgPath,jdbcType=VARCHAR},
+      </if>
     </set>
     where user_id = #{userId,jdbcType=VARCHAR}
   </update>
@@ -84,18 +88,19 @@
       sjnumber = #{sjnumber,jdbcType=VARCHAR},
       education_background = #{educationBackground,jdbcType=VARCHAR},
       professional_title = #{professionalTitle,jdbcType=VARCHAR},
-      research_direction = #{researchDirection,jdbcType=VARCHAR}
+      research_direction = #{researchDirection,jdbcType=VARCHAR},
+      img_path = #{imgPath,jdbcType=VARCHAR}
     where user_id = #{userId,jdbcType=VARCHAR}
   </update>
   <insert id="insert" parameterType="user" >
 
     insert into user (user_id, account, pwd,
-     user_name, sex, school,department,major,sjnumber,education_background,professional_title,research_direction)
+     user_name, sex, school,department,major,sjnumber,education_background,professional_title,research_direction,img_path)
     values (#{userId,jdbcType=VARCHAR}, #{account,jdbcType=VARCHAR}, #{pwd,jdbcType=VARCHAR},
     #{userName,jdbcType=VARCHAR},#{sex,jdbcType=VARCHAR}, #{school,jdbcType=VARCHAR},
     #{department,jdbcType=VARCHAR},#{major,jdbcType=VARCHAR},#{sjnumber,jdbcType=VARCHAR},
     #{educationBackground,jdbcType=VARCHAR},#{professionalTitle,jdbcType=VARCHAR},
-    #{researchDirection,jdbcType=VARCHAR})
+    #{researchDirection,jdbcType=VARCHAR}),#{imgPath,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="user" >
 
@@ -138,7 +143,9 @@
       <if test="researchDirection != null" >
         research_direction,
       </if>
-
+      <if test="imgPath != null" >
+        img_path,
+      </if>
     </trim>
 
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -178,6 +185,9 @@
       <if test="researchDirection != null" >
         #{researchDirection,jdbcType=VARCHAR},
       </if>
+      <if test="imgPath != null" >
+        #{imgPath,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
 
@@ -204,7 +214,7 @@
 
 SELECT
     u.user_id, u.account, u.pwd, u.user_name, u.sex, u.school, u.department, u.major, u.sjnumber, u.education_background,
-    u.professional_title, u.research_direction
+    u.professional_title, u.research_direction,u.img_path
  FROM class c,USER u
 WHERE c.class_id = #{classId} AND c.user_id = u.user_id
   </select>
@@ -212,7 +222,7 @@ WHERE c.class_id = #{classId} AND c.user_id = u.user_id
   <select id="findStudentByClassId" parameterType="java.lang.String" resultMap="BaseResultMap">
     SELECT
     u.user_id, u.account, u.pwd, u.user_name, u.sex, u.school, u.department, u.major, u.sjnumber, u.education_background,
-    u.professional_title, u.research_direction
+    u.professional_title, u.research_direction,u.img_path
       FROM
 (SELECT pinfo.user_id FROM class c,personal_attendance_information_table pinfo
 WHERE c.class_id = #{classId} AND c.class_id = pinfo.class_id )  pcinfo,USER u

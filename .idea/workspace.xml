@@ -1,209 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="e-teacher:war" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="95b5f1b9-9aeb-40dd-b555-9037c71c3337" name="Default" comment="给占老师看的版本">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-file/target/e-file.war" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/controller/AccountAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/controller/AttendanceDetailAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/controller/AttendanceRecordAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/controller/BaseAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/controller/ClassRoomManagementAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/controller/PersonalAttendanceInformationTableAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/controller/TotalAttendanceInformationAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/controller/UserAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/AttendanceDetailMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/AttendanceRecordMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/BaseMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/ClassMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/InviteCodeMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/PersonalAttendanceInformationTableMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/TotalAttendanceInfomationMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/UserMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/entity/AttendanceDetail.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/entity/AttendanceRecord.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/entity/Class.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/entity/Constants.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/entity/InviteCode.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/entity/Page.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/entity/PersonalAttendanceInformationTable.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/entity/PersonalAttendanceInformationTableKey.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/entity/TotalAttendanceInfomation.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/entity/User.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/AccountService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/AttendanceDetailService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/AttendanceRecordService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/BaseService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/ClassService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/InviteCodeService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/PersonalAttendanceInformationTableService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/TotalAttendanceInfomationService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/UserService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/impl/AccountServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/impl/AttendanceDetailServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/impl/AttendanceRecordServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/impl/BaseServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/impl/ClassServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/impl/InviteCodeServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/impl/PersonalAttendanceInformationTableServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/impl/TotalAttendanceInfomationServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/service/impl/UserServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT.war" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/controller/AccountAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/controller/AttendanceDetailAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/controller/AttendanceRecordAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/controller/BaseAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/controller/ClassRoomManagementAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/controller/PersonalAttendanceInformationTableAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/controller/TotalAttendanceInformationAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/controller/UserAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/AttendanceDetailMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/AttendanceRecordMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/BaseMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/ClassMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/InviteCodeMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/PersonalAttendanceInformationTableMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/TotalAttendanceInfomationMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/UserMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/entity/AttendanceDetail.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/entity/AttendanceRecord.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/entity/Class.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/entity/Constants.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/entity/InviteCode.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/entity/Page.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/entity/PersonalAttendanceInformationTable.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/entity/PersonalAttendanceInformationTableKey.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/entity/TotalAttendanceInfomation.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/entity/User.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/AccountService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/AttendanceDetailService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/AttendanceRecordService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/BaseService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/ClassService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/InviteCodeService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/PersonalAttendanceInformationTableService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/TotalAttendanceInfomationService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/UserService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/impl/AccountServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/impl/AttendanceDetailServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/impl/AttendanceRecordServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/impl/BaseServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/impl/ClassServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/impl/InviteCodeServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/impl/PersonalAttendanceInformationTableServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/impl/TotalAttendanceInfomationServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/service/impl/UserServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/aopalliance-1.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/asm-3.3.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/aspectjrt-1.8.10.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/aspectjweaver-1.8.10.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/c3p0-0.9.1.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/cglib-2.2.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/commons-logging-1.1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/jackson-core-asl-1.7.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/jackson-mapper-asl-1.7.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/javassist-3.17.1-GA.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/log4j-1.2.17.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/mybatis-3.2.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/mybatis-spring-1.2.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-java-5.1.12.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/slf4j-log4j12-1.7.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-3.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-3.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/spring-context-3.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/spring-core-3.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-3.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/spring-jdbc-3.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/spring-orm-3.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/spring-tx-3.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/spring-web-3.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-3.2.5.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-file/target/e-file/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-file/target/e-file/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-file/target/e-file/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/AttendanceDetailAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/AttendanceRecordAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/PersonalAttendanceInformationTableAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/TotalAttendanceInformationAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/UserAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/AttendanceDetailService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/AttendanceRecordService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/TotalAttendanceInfomationService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/AttendanceDetailServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/AttendanceRecordServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/TotalAttendanceInfomationServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/applicationContext.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/AttendanceDetailMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/AttendanceRecordMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/ClassMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/InviteCodeMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/PersonalAttendanceInformationTableMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/TotalAttendanceInfomationMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/UserMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/db.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/generator.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/generatorConfig.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/myBatis-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/classes/spring-mvc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/applicationContext.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/AttendanceDetailMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/AttendanceRecordMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/ClassMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/InviteCodeMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/PersonalAttendanceInformationTableMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/TotalAttendanceInfomationMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/UserMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/db.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/generator.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/generatorConfig.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/myBatis-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/spring-mvc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/main.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/login.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/webContexts.xml" afterPath="" />
+    <list default="true" id="95b5f1b9-9aeb-40dd-b555-9037c71c3337" name="Default" comment="安普利主机第一版本">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml___jb_bak___" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml___jb_bak___" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml___jb_bak___" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/entity/AttendanceDetail.class" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/entity/AttendanceDetail.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/entity/User.class" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/entity/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/entity/AttendanceDetail.class" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/entity/AttendanceDetail.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/entity/User.class" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/entity/User.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__c3p0_c3p0_0_9_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__c3p0_c3p0_0_9_1_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_2_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_2_2_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_9.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_10.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_10.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_10.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_10.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_7_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_7_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_7_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_7_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_17_1_GA.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_17_1_GA.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_2_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_2_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_3_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_3_2_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_3_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_3_2_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_2_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_3_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_3_2_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_3_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_3_2_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_3_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_3_2_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_3_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_3_2_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_3_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_3_2_5_RELEASE.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-core/e-core.iml" afterPath="$PROJECT_DIR$/e-core/e-core.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-file/e-file.iml" afterPath="$PROJECT_DIR$/e-file/e-file.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-parent.iml" afterPath="$PROJECT_DIR$/e-parent.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-student/e-student.iml" afterPath="$PROJECT_DIR$/e-student/e-student.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/AccountAction.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/AccountAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/ClassRoomManagementAction.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/ClassRoomManagementAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceDetailMapper.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceDetailMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/e-teacher.iml" afterPath="$PROJECT_DIR$/e-teacher/e-teacher.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceDetailMapper.xml" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceDetailMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceRecordMapper.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceRecordMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceRecordMapper.xml" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceRecordMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/BaseMapper.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/BaseMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/ClassMapper.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/ClassMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/ClassMapper.xml" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/ClassMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/PersonalAttendanceInformationTableMapper.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/PersonalAttendanceInformationTableMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/PersonalAttendanceInformationTableMapper.xml" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/PersonalAttendanceInformationTableMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/TotalAttendanceInfomationMapper.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/TotalAttendanceInfomationMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/TotalAttendanceInfomationMapper.xml" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/TotalAttendanceInfomationMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/UserMapper.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/UserMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/UserMapper.xml" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/UserMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/AttendanceDetail.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/AttendanceDetail.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/AttendanceRecord.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/AttendanceRecord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/PersonalAttendanceInformationTable.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/PersonalAttendanceInformationTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/TotalAttendanceInfomation.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/TotalAttendanceInfomation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/User.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/BaseService.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/BaseService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/ClassService.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/ClassService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/PersonalAttendanceInformationTableService.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/PersonalAttendanceInformationTableService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/UserService.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/AccountServiceImpl.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/AccountServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/BaseServiceImpl.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/BaseServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/ClassServiceImpl.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/ClassServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/PersonalAttendanceInformationTableServiceImpl.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/PersonalAttendanceInformationTableServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/e-teacher/src/main/resources/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/AttendanceRecordServiceImpl.java" afterPath="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/AttendanceRecordServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/src/main/resources/db.properties" afterPath="$PROJECT_DIR$/e-teacher/src/main/resources/db.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/AttendanceDetailMapper.xml" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/AttendanceDetailMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/UserMapper.xml" afterPath="$PROJECT_DIR$/e-teacher/target/classes/com/xulifei/e/dao/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/target/classes/db.properties" afterPath="$PROJECT_DIR$/e-teacher/target/classes/db.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/AttendanceDetailMapper.xml" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/AttendanceDetailMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/UserMapper.xml" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/com/xulifei/e/dao/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/db.properties" afterPath="$PROJECT_DIR$/e-teacher/target/e-teacher-1.0-SNAPSHOT/WEB-INF/classes/db.properties" />
     </list>
     <ignored path="e-parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -220,7 +82,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -228,12 +89,139 @@
     <option name="autoscrollToSource" value="true" />
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="e-parent" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="UserAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/UserAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="43" column="35" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/BaseMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="945">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="e#624#625#0" expanded="true" />
+                <element signature="e#654#655#0" expanded="true" />
+                <element signature="e#700#701#0" expanded="true" />
+                <element signature="e#738#739#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/UserMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+              <folding>
+                <marker date="1509874334000" expanded="true" signature="1661:1770" ph="select from user" />
+                <marker date="1509874334000" expanded="true" signature="1855:1918" ph="delete from " />
+                <marker date="1509874334000" expanded="true" signature="2000:3183" ph="update user " />
+                <marker date="1509874334000" expanded="true" signature="3271:3359" ph="update user " />
+                <marker date="1509874334000" expanded="true" signature="3453:4109" ph="update user " />
+                <marker date="1509874334000" expanded="true" signature="4172:4761" ph="insert into user... " />
+                <marker date="1509874334000" expanded="true" signature="7145:7205" ph="select * fro... USER" />
+                <marker date="1509874334000" expanded="true" signature="7303:7347" ph="select * fro... USER" />
+                <marker date="1509874334000" expanded="true" signature="7442:7544" ph="update user " />
+                <marker date="1509874334000" expanded="true" signature="7655:7918" ph="SELECT u.use... class" />
+                <marker date="1509874334000" expanded="true" signature="8032:8420" ph="SELECT u.use... user_id" />
+                <marker date="1509874334000" expanded="true" signature="8231:8370" ph="SELECT pinfo... class" />
+                <marker date="1509874334000" expanded="true" signature="8553:9072" ph="SELECT u.use... user_id" />
+                <marker date="1509874334000" expanded="true" signature="8753:9018" ph="SELECT pinfo... class" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e-teacher/src/main/resources/db.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="16" lean-forward="true" selection-start-line="0" selection-start-column="16" selection-end-line="13" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/BaseAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="33" lean-forward="true" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountAction.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/AccountAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AttendanceRecordAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/AttendanceRecordAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/UserMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>saveAttendance</find>
+      <find>attendanceDetailIdsUnFinsh</find>
+      <find>updateList</find>
+      <find>#{attendanceDetailIds}</find>
+      <find>update</find>
+      <find>&lt;foreach</find>
+      <find>foreach</find>
+      <find>selec</find>
+      <find>selectl</find>
+      <find>get</find>
+      <find>findStudent</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -243,10 +231,24 @@
       <projects_view />
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" />
-  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/AttendanceRecordServiceImpl.java" />
+        <option value="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceDetailMapper.xml" />
+        <option value="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/AttendanceDetail.java" />
+        <option value="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/User.java" />
+        <option value="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/e-teacher/src/main/resources/db.properties" />
+        <option value="$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/AccountAction.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -259,23 +261,20 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="H:/maven-3.0.5" />
+        <option name="userSettingsFile" value="F:\settings.xml" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="53" />
+    <option name="x" value="388" />
+    <option name="y" value="270" />
     <option name="width" value="1329" />
     <option name="height" value="766" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -295,36 +294,221 @@
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="e-parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="e-parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="e-parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="e-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-parent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="e-teacher" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="e-teacher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="e-teacher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="e-teacher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="e-teacher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="e" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="H:\node-v6.10.2-win-x64\node-v6.10.2-win-x64\node.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat7">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat8">
+    <configuration name="Tomcat8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.24" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="e-teacher:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_e-parent" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9407" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="Make" enabled="false" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="e-teacher:war" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="false" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="e-file" />
+      <envs />
+    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat7" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -392,16 +576,105 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method>
+        <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="e-teacher:war" />
         </option>
       </method>
     </configuration>
+    <configuration default="true" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_e-parent_2" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9478" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <method />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
@@ -460,29 +733,6 @@
       <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
       <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
       <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
@@ -569,37 +819,6 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <module name="" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="depsClasspath" value="false" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -645,55 +864,6 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="e-file" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -722,67 +892,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="_e-parent_2" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="9478" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method />
-    </configuration>
     <configuration default="true" type="XSLT" factoryName="XSLT">
       <option name="myOutputFile" />
       <option name="myOpenOutputFile" value="false" />
@@ -799,13 +908,61 @@
       <JdkChoice value="FROM_MODULE" />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="targets">
+            <list>
+              <WatchedTargetModelImpl>
+                <option name="name" value="CONTEXT_XML" />
+                <option name="transportStagingTarget">
+                  <TransportTarget>
+                    <option name="id" value="25b52966-427c-4a70-a375-516440078306" />
+                    <id>25b52966-427c-4a70-a375-516440078306</id>
+                  </TransportTarget>
+                </option>
+                <option name="watchedLocalPath" value="" />
+                <watched-path />
+                <name>CONTEXT_XML</name>
+                <transport-target>
+                  <TransportTarget>
+                    <option name="id" value="25b52966-427c-4a70-a375-516440078306" />
+                    <id>25b52966-427c-4a70-a375-516440078306</id>
+                  </TransportTarget>
+                </transport-target>
+              </WatchedTargetModelImpl>
+              <StagingTargetModelImpl>
+                <option name="name" value="STAGING" />
+                <option name="stagingRemotePath" value="" />
+                <option name="transportStagingTarget">
+                  <TransportTarget>
+                    <option name="id" value="6a631005-8bfa-498d-b3a3-7ddac19bc96e" />
+                    <id>6a631005-8bfa-498d-b3a3-7ddac19bc96e</id>
+                  </TransportTarget>
+                </option>
+                <staging-path />
+                <name>STAGING</name>
+                <transport-target>
+                  <TransportTarget>
+                    <option name="id" value="6a631005-8bfa-498d-b3a3-7ddac19bc96e" />
+                    <id>6a631005-8bfa-498d-b3a3-7ddac19bc96e</id>
+                  </TransportTarget>
+                </transport-target>
+              </StagingTargetModelImpl>
+            </list>
+          </option>
+          <option name="transportHostId" />
+          <host-id />
+        </data>
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="49830" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run-script" />
@@ -819,81 +976,10 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="Tomcat7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat7" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/" />
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="e-teacher:war">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_e-parent" />
-        <option name="HTTP_PORT" value="8081" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="9407" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method />
-    </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat7" />
-    </list>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -902,38 +988,59 @@
       <changelist id="95b5f1b9-9aeb-40dd-b555-9037c71c3337" name="Default" comment="" />
       <created>1505094143861</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1505094143861</updated>
       <workItem from="1505094147392" duration="6323000" />
-      <workItem from="1507623686368" duration="1241000" />
+      <workItem from="1507623686368" duration="1741000" />
+      <workItem from="1509766672222" duration="780000" />
+      <workItem from="1509768696825" duration="8911000" />
+      <workItem from="1509864271918" duration="2966000" />
+      <workItem from="1510143236621" duration="1310000" />
+      <workItem from="1514332910638" duration="19000" />
+      <workItem from="1514433409363" duration="1863000" />
+      <workItem from="1514439079209" duration="6049000" />
     </task>
+    <task id="LOCAL-00001" summary="给占老师看的版本">
+      <created>1507625682819</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1507625682819</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7564000" />
+    <option name="totallyTimeSpent" value="29962000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="53" y="0" width="1329" height="766" extended-state="0" />
-    <editor active="false" />
+    <frame x="388" y="270" width="1329" height="766" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4328594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25689518" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53895074" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3668942" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24672489" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32751092" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27613726" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0521327" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -941,6 +1048,9 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -955,7 +1065,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="给占老师看的版本" />
-    <option name="LAST_COMMIT_MESSAGE" value="给占老师看的版本" />
+    <MESSAGE value="安普利主机第一版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="安普利主机第一版本" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -966,163 +1077,563 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/AttendanceRecordAction.java">
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/BaseService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="88" column="31" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
+        <state relative-caret-position="228">
+          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/BaseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceRecordMapper.java">
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/BaseMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceRecordMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="126" column="30" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
-          <folding>
-            <marker date="1503415170537" expanded="true" signature="1879:2013" placeholder="select from attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="2086:2174" placeholder="delete from " />
-            <marker date="1503415170537" expanded="true" signature="2691:4050" placeholder="update atten... " />
-            <marker date="1503415170537" expanded="true" signature="4156:4877" placeholder="update atten... " />
-            <marker date="1503415170537" expanded="true" signature="4969:5612" placeholder="INSERT INTO attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="5722:6261" placeholder="SELECT * FRO... attendance_id" />
-            <marker date="1503415170537" expanded="true" signature="5739:6157" placeholder="SELECT ar.at... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="6383:6972" placeholder="SELECT * FRO... attendance_id" />
-            <marker date="1503415170537" expanded="true" signature="6400:6818" placeholder="SELECT ar.at... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="7082:7338" placeholder="SELECT atten... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="7465:7744" placeholder="SELECT atten... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="7861:8004" placeholder="SELECT atten... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="8171:8484" placeholder="SELECT ar.at... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="8575:8833" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="8631:8771" placeholder="SELECT a.rat... rattendance_number" />
-            <marker date="1503415170537" expanded="true" signature="8665:8769" placeholder="SELECT ratte... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="8933:9345" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="8989:9129" placeholder="SELECT a.rat... rattendance_number" />
-            <marker date="1503415170537" expanded="true" signature="9023:9127" placeholder="SELECT ratte... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="9152:9282" placeholder="SELECT a.rle... rleave_number" />
-            <marker date="1503415170537" expanded="true" signature="9181:9280" placeholder="SELECT rleav... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="9439:9837" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="9489:9617" placeholder="SELECT a.rla... rlate_number" />
-            <marker date="1503415170537" expanded="true" signature="9517:9615" placeholder="SELECT rlate... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="9644:9774" placeholder="SELECT a.rku... rkuang_number" />
-            <marker date="1503415170537" expanded="true" signature="9673:9772" placeholder="SELECT rkuan... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="9937:10354" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="9988:10118" placeholder="SELECT a.rku... rkuang_number" />
-            <marker date="1503415170537" expanded="true" signature="10017:10116" placeholder="SELECT rkuan... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="10151:10291" placeholder="SELECT a.rat... rattendance_number" />
-            <marker date="1503415170537" expanded="true" signature="10185:10289" placeholder="SELECT ratte... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="10448:10846" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="10499:10629" placeholder="SELECT a.rle... rleave_number" />
-            <marker date="1503415170537" expanded="true" signature="10528:10627" placeholder="SELECT rleav... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="10655:10783" placeholder="SELECT a.rla... rlate_number" />
-            <marker date="1503415170537" expanded="true" signature="10683:10781" placeholder="SELECT rlate... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="10944:11052" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="11143:11285" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="11381:11533" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="11623:11763" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="11854:11996" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="12083:12229" placeholder="UPDATE atten... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="247">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25165564">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        <state relative-caret-position="665">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4256">
+          <caret line="224" column="57" lean-forward="true" selection-start-line="224" selection-start-column="57" selection-end-line="224" selection-end-column="57" />
+          <folding>
+            <marker date="1509874334000" expanded="true" signature="1661:1770" ph="select from user" />
+            <marker date="1509874334000" expanded="true" signature="1855:1918" ph="delete from " />
+            <marker date="1509874334000" expanded="true" signature="2000:3183" ph="update user " />
+            <marker date="1509874334000" expanded="true" signature="3271:3359" ph="update user " />
+            <marker date="1509874334000" expanded="true" signature="3453:4109" ph="update user " />
+            <marker date="1509874334000" expanded="true" signature="4172:4761" ph="insert into user... " />
+            <marker date="1509874334000" expanded="true" signature="7145:7205" ph="select * fro... USER" />
+            <marker date="1509874334000" expanded="true" signature="7303:7347" ph="select * fro... USER" />
+            <marker date="1509874334000" expanded="true" signature="7442:7544" ph="update user " />
+            <marker date="1509874334000" expanded="true" signature="7655:7918" ph="SELECT u.use... class" />
+            <marker date="1509874334000" expanded="true" signature="8032:8420" ph="SELECT u.use... user_id" />
+            <marker date="1509874334000" expanded="true" signature="8231:8370" ph="SELECT pinfo... class" />
+            <marker date="1509874334000" expanded="true" signature="8553:9072" ph="SELECT u.use... user_id" />
+            <marker date="1509874334000" expanded="true" signature="8753:9018" ph="SELECT pinfo... class" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceDetailMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceRecordMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0555556">
-          <caret line="126" column="30" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
-          <folding>
-            <marker date="1503415170537" expanded="true" signature="1879:2013" placeholder="select from attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="2086:2174" placeholder="delete from " />
-            <marker date="1503415170537" expanded="true" signature="2691:4050" placeholder="update atten... " />
-            <marker date="1503415170537" expanded="true" signature="4156:4877" placeholder="update atten... " />
-            <marker date="1503415170537" expanded="true" signature="4969:5612" placeholder="INSERT INTO attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="5722:6261" placeholder="SELECT * FRO... attendance_id" />
-            <marker date="1503415170537" expanded="true" signature="5739:6157" placeholder="SELECT ar.at... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="6383:6972" placeholder="SELECT * FRO... attendance_id" />
-            <marker date="1503415170537" expanded="true" signature="6400:6818" placeholder="SELECT ar.at... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="7082:7338" placeholder="SELECT atten... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="7465:7744" placeholder="SELECT atten... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="7861:8004" placeholder="SELECT atten... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="8171:8484" placeholder="SELECT ar.at... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="8575:8833" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="8631:8771" placeholder="SELECT a.rat... rattendance_number" />
-            <marker date="1503415170537" expanded="true" signature="8665:8769" placeholder="SELECT ratte... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="8933:9345" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="8989:9129" placeholder="SELECT a.rat... rattendance_number" />
-            <marker date="1503415170537" expanded="true" signature="9023:9127" placeholder="SELECT ratte... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="9152:9282" placeholder="SELECT a.rle... rleave_number" />
-            <marker date="1503415170537" expanded="true" signature="9181:9280" placeholder="SELECT rleav... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="9439:9837" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="9489:9617" placeholder="SELECT a.rla... rlate_number" />
-            <marker date="1503415170537" expanded="true" signature="9517:9615" placeholder="SELECT rlate... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="9644:9774" placeholder="SELECT a.rku... rkuang_number" />
-            <marker date="1503415170537" expanded="true" signature="9673:9772" placeholder="SELECT rkuan... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="9937:10354" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="9988:10118" placeholder="SELECT a.rku... rkuang_number" />
-            <marker date="1503415170537" expanded="true" signature="10017:10116" placeholder="SELECT rkuan... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="10151:10291" placeholder="SELECT a.rat... rattendance_number" />
-            <marker date="1503415170537" expanded="true" signature="10185:10289" placeholder="SELECT ratte... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="10448:10846" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="10499:10629" placeholder="SELECT a.rle... rleave_number" />
-            <marker date="1503415170537" expanded="true" signature="10528:10627" placeholder="SELECT rleav... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="10655:10783" placeholder="SELECT a.rla... rlate_number" />
-            <marker date="1503415170537" expanded="true" signature="10683:10781" placeholder="SELECT rlate... attendance_record" />
-            <marker date="1503415170537" expanded="true" signature="10944:11052" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="11143:11285" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="11381:11533" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="11623:11763" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="11854:11996" placeholder="UPDATE atten... " />
-            <marker date="1503415170537" expanded="true" signature="12083:12229" placeholder="UPDATE atten... " />
-          </folding>
+        <state relative-caret-position="874">
+          <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceRecordMapper.java">
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/ClassMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.031456955">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="152">
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/PersonalAttendanceInformationTableMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1558">
+          <caret line="82" column="85" lean-forward="true" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/AttendanceDetailAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="53" column="83" lean-forward="true" selection-start-line="53" selection-start-column="83" selection-end-line="53" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/AttendanceDetailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceDetailMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2109">
+          <caret line="111" column="116" lean-forward="false" selection-start-line="111" selection-start-column="98" selection-end-line="111" selection-end-column="116" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/AttendanceRecordAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1953642">
-          <caret line="88" column="31" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
+        <state relative-caret-position="2242">
+          <caret line="135" column="44" lean-forward="false" selection-start-line="135" selection-start-column="44" selection-end-line="135" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/AttendanceRecordServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="78" column="72" lean-forward="false" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/AttendanceDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#655#656#0" expanded="false" />
+            <element signature="e#686#687#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/AttendanceRecordAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="88" column="31" lean-forward="false" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceRecordMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceRecordMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="126" column="30" lean-forward="false" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/e-teacher/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3882353">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/AttendanceRecordService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceRecordMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/ClassMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/TotalAttendanceInfomationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/PersonalAttendanceInformationTableMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1558">
+          <caret line="82" column="85" lean-forward="false" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/AttendanceDetailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/AttendanceDetailAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="53" column="83" lean-forward="false" selection-start-line="53" selection-start-column="83" selection-end-line="53" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceDetailMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/InviteCodeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceRecordMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/AttendanceDetailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/AttendanceRecordServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="78" column="72" lean-forward="false" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/AttendanceDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+          <folding>
+            <element signature="e#655#656#0" expanded="false" />
+            <element signature="e#686#687#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/service/impl/BaseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/BaseMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/UserAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="43" column="35" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1917">
+          <caret line="172" column="23" lean-forward="true" selection-start-line="172" selection-start-column="23" selection-end-line="172" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding>
+            <marker date="1509874334000" expanded="true" signature="1661:1770" ph="select from user" />
+            <marker date="1509874334000" expanded="true" signature="1855:1918" ph="delete from " />
+            <marker date="1509874334000" expanded="true" signature="2000:3183" ph="update user " />
+            <marker date="1509874334000" expanded="true" signature="3271:3359" ph="update user " />
+            <marker date="1509874334000" expanded="true" signature="3453:4109" ph="update user " />
+            <marker date="1509874334000" expanded="true" signature="4172:4761" ph="insert into user... " />
+            <marker date="1509874334000" expanded="true" signature="7145:7205" ph="select * fro... USER" />
+            <marker date="1509874334000" expanded="true" signature="7303:7347" ph="select * fro... USER" />
+            <marker date="1509874334000" expanded="true" signature="7442:7544" ph="update user " />
+            <marker date="1509874334000" expanded="true" signature="7655:7918" ph="SELECT u.use... class" />
+            <marker date="1509874334000" expanded="true" signature="8032:8420" ph="SELECT u.use... user_id" />
+            <marker date="1509874334000" expanded="true" signature="8231:8370" ph="SELECT pinfo... class" />
+            <marker date="1509874334000" expanded="true" signature="8553:9072" ph="SELECT u.use... user_id" />
+            <marker date="1509874334000" expanded="true" signature="8753:9018" ph="SELECT pinfo... class" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/resources/db.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="true" selection-start-line="0" selection-start-column="16" selection-end-line="13" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/BaseAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="33" lean-forward="true" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/AttendanceRecordAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/dao/AttendanceDetailMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <marker date="1509788476000" expanded="true" signature="1034:1181" ph="select from attendance_detail" />
+            <marker date="1509788476000" expanded="true" signature="1266:1367" ph="delete from " />
+            <marker date="1509788476000" expanded="true" signature="1444:1588" ph="delete from " />
+            <marker date="1509788476000" expanded="true" signature="2380:2925" ph="update atten... " />
+            <marker date="1509788476000" expanded="true" signature="3031:3349" ph="update atten... " />
+            <marker date="1509788476000" expanded="true" signature="3422:3720" ph="insert into attendance_detail... " />
+            <marker date="1509788476000" expanded="true" signature="3839:3925" ph="SELECT * FRO... attendance_detail" />
+            <marker date="1509788476000" expanded="true" signature="4044:4182" ph="SELECT atten... attendance_detail" />
+            <marker date="1509788476000" expanded="true" signature="4569:4694" ph="SELECT atten... attendance_detail" />
+            <marker date="1509788476000" expanded="true" signature="4798:4991" ph="SELECT ad.at... attendance_detail" />
+            <marker date="1509788476000" expanded="true" signature="5072:5193" ph="UPDATE atten... " />
+            <marker date="1509788476000" expanded="true" signature="5293:5527" ph="SELECT ad.at... attendance_detail" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-teacher/src/main/java/com/xulifei/e/controller/AccountAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>e-file:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>e-teacher</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

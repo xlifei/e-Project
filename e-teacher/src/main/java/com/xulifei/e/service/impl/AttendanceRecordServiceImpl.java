@@ -56,7 +56,7 @@ public class AttendanceRecordServiceImpl extends BaseServiceImpl<AttendanceRecor
         List<AttendanceDetail> attendanceDetailList = attendanceDetailMapper.findDetailsByAttendanceId(attendanceRecord);
 //        封装未完成此次考勤的详细记录id
         List<String> attendanceDetailIdsUnFinsh = new ArrayList<String>();
-//封装完成此次考勤的详细记录id
+//        封装完成此次考勤的详细记录id
         List<String > attendanceDetailIdsFinsh = new ArrayList<String>();
 //        封装未完成此次考勤的user_id
         List<String > detailUserIdUnFinsh = new ArrayList<String>();
@@ -77,11 +77,11 @@ public class AttendanceRecordServiceImpl extends BaseServiceImpl<AttendanceRecor
         if (detailUserIdUnFinsh.size()>0) {
 //            更新考勤详细sis_fish为true，考勤状态status默认为旷课，不用改
             attendanceDetailMapper.updateList(attendanceDetailIdsUnFinsh);
-            //        更新考勤记录的旷到人数以及旷到的详细记录的sis_finsh为true
+            // 更新考勤记录的旷到人数以及旷到的详细记录的sis_finsh为true
             attendanceRecord.setRkuangNumber(attendanceDetailIdsUnFinsh.size());
              attendanceRecordMapper.updateKuangByAttendance(attendanceRecord);
 
-            //        查询所有未完成的个人统计并加一（总考勤数和旷到数）
+            // 查询所有未完成的个人统计并加一（总考勤数和旷到数）
             Map<String,Object> map2 = new HashMap<String,Object>();
             map2.put("classId",attendanceRecord.getClassId());
             map2.put("userIds",detailUserIdUnFinsh);

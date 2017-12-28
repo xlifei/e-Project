@@ -29,6 +29,16 @@ public class User implements Serializable {
 
     private String researchDirection;
 
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
+    }
+
+    private String imgPath;
+
     private PersonalAttendanceInformationTable p;
 
     public PersonalAttendanceInformationTable getP() {
